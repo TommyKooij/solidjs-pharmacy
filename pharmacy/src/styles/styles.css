@@ -1,5 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 .btn {
+  @apply inline-block 
+  p-2 
+  m-2;
 }
 
 .btn-default {
+  @apply text-gray-900;
+}
+
+.btn-secundary {
+  @apply text-gray-400;
+}
+
+.btn-danger {
+  @apply text-white 
+  bg-red-600;
+}
+
+.btn-login {
+  @apply text-gray-900 
+  bg-gray-50 
+  px-4
+  rounded-lg;
+}
+
+.btn-register {
+  @apply text-white 
+  bg-gray-900 
+  px-4
+  rounded-lg;
+}
+
+.btn-group {
+  @apply w-auto 
+  content-center
+  mx-4;
 }

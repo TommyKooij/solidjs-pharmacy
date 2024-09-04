@@ -1,7 +1,12 @@
-import React from "react";
+import Header from "../../components/Header";
 
-const Layout = () => {
-  return <div>Layout</div>;
+const PageLayout = (props) => {
+  return (
+    <div>
+      <Header />
+      {props.children}
+    </div>
+  );
 };
 
-export default Layout;
+export default PageLayout;
