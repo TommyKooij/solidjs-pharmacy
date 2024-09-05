@@ -12,8 +12,17 @@
   @apply text-gray-900;
 }
 
+.btn-default:hover {
+  @apply text-white;
+}
+
 .btn-secundary {
   @apply text-gray-400;
+}
+
+.btn-secundary:hover {
+  @apply text-gray-600
+  font-semibold;
 }
 
 .btn-danger {
