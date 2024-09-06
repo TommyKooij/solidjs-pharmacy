@@ -4,7 +4,7 @@ const PageLayout = (props) => {
   return (
     <div>
       <Header />
-      {props.children}
+      <div class="p-4">{props.children}</div>
     </div>
   );
 };
