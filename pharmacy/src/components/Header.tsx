@@ -2,7 +2,7 @@ import { A } from "@solidjs/router";
 import "../styles/styles.css";
 import Searchbar from "./Searchbar";
 
-export default function Header() {
+const Header = () => {
   const pages = ["Merken", "Ons Advies", "Partners", "Contact"];
   const sections = ["Soorten", "Voeding", "Kinderen", "Dieren"];
 
@@ -58,4 +58,6 @@ export default function Header() {
       </div>
     </>
   );
-}
+};
+
+export default Header;
