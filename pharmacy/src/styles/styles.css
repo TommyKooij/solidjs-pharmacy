@@ -2,10 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
+body {
+  width: 100%;
+}
+
 .btn {
   @apply inline-block 
-  p-2 
-  m-2;
+  p-2;
 }
 
 .btn-default {
@@ -23,6 +26,13 @@
 .btn-secundary:hover {
   @apply text-gray-600
   font-semibold;
+}
+
+.btn-add {
+  @apply text-white 
+  bg-green-500
+  px-4
+  rounded-lg;
 }
 
 .btn-danger {

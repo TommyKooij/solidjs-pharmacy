@@ -5,6 +5,8 @@ import { Route, Router } from "@solidjs/router";
 import "./styles/index.css";
 import App from "./App";
 import Home from "./pages/Home";
+import ProductPage from "./pages/Product";
+import Favorites from "./pages/Favorites";
 
 const root = document.getElementById("root");
 
@@ -18,6 +20,8 @@ render(
   () => (
     <Router root={App}>
       <Route path="/" component={Home} />
+      <Route path="/Product" component={ProductPage} />
+      <Route path="/Favorites" component={Favorites} />
     </Router>
   ),
   root!

@@ -1,6 +1,7 @@
 import Card from "../components/Card";
 import PageLayout from "./layout/Layout";
 import DefaultImage from "../assets/1077596-200.png";
+import { A } from "@solidjs/router";
 
 // * Home page content
 const Home = () => {
@@ -43,14 +44,16 @@ const ProductGroup = ({ title, pages }: ProductGroupProps) => {
       <h1 class="ml-10 mb-4 text-green-500 text-2xl font-bold">{title}</h1>
       <div class="grid grid-cols-5 gap-5 mx-10">
         {pages.map((page) => (
-          <Card>
-            <div class="flex justify-center">
-              <img src={DefaultImage} alt="product_image" />
-            </div>
-            <h2 class="text-xl font-bold">Title</h2>
-            <h4 class="text-sm">Description</h4>
-            <h2 class="text-green-500 text-xl font-bold mt-4">Prijs</h2>
-          </Card>
+          <A href="/Product">
+            <Card>
+              <div class="flex justify-center">
+                <img src={DefaultImage} alt="product_image" />
+              </div>
+              <h2 class="text-xl font-bold">Title</h2>
+              <h4 class="text-sm">Description</h4>
+              <h2 class="text-green-500 text-xl font-bold mt-4">Prijs</h2>
+            </Card>
+          </A>
         ))}
       </div>
     </div>
