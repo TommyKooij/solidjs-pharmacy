@@ -16,7 +16,7 @@ const Favorites = () => {
           <A href="/Product">
             <Card>
               <div class="flex justify-center">
-                <img src={DefaultImage} alt="product_image" />
+                <img src={DefaultImage} alt="product_image" class="size-48" />
               </div>
               <h2 class="text-xl font-bold">Title</h2>
               <h4 class="text-sm">Description</h4>

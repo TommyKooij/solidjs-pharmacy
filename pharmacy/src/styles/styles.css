@@ -37,7 +37,11 @@ body {
 
 .btn-danger {
   @apply text-white 
-  bg-red-600;
+  bg-red-600
+  border-2
+  border-red-900
+  rounded-lg
+  my-4;
 }
 
 .btn-login {

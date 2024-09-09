@@ -1,4 +1,5 @@
 import PageLayout from "./layout/Layout";
+import DefaultImage from "../assets/1077596-200.png";
 
 const ProductPage = () => {
   return (
@@ -9,9 +10,9 @@ const ProductPage = () => {
       />
 
       <PageLayout>
-        <div class="flex justify-center">
-          <img src="" alt="product_image" />
-          <div class="ml-10 justify-start">
+        <div class="flex justify-center my-6">
+          <img src={DefaultImage} alt="product_image" class="size-1/4" />
+          <div class="p-4 ml-10">
             <h2 class="text-xl font-bold">Title</h2>
             <h1 class="text-green-500 text-3xl font-bold">Prijs</h1>
             <h3 class="text-gray-400 text-lg pt-4">Description</h3>

@@ -62,12 +62,12 @@ const Navigation = () => {
           </div>
         </div>
         <div class="btn-group space-x-4">
-          <A href="/Favorites" class="btn">
+          <A href="/Favorieten" class="btn">
             <span class="material-symbols-outlined text-green-500">
               favorite
             </span>
           </A>
-          <A href="/Cart" class="btn">
+          <A href="/Winkelwagen" class="btn">
             <span class="material-symbols-outlined bg-green-500 text-white p-2 rounded">
               shopping_cart
             </span>

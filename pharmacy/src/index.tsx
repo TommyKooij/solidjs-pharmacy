@@ -7,6 +7,7 @@ import App from "./App";
 import Home from "./pages/Home";
 import ProductPage from "./pages/Product";
 import Favorites from "./pages/Favorites";
+import Cart from "./pages/Cart";
 
 const root = document.getElementById("root");
 
@@ -21,7 +22,8 @@ render(
     <Router root={App}>
       <Route path="/" component={Home} />
       <Route path="/Product" component={ProductPage} />
-      <Route path="/Favorites" component={Favorites} />
+      <Route path="/Favorieten" component={Favorites} />
+      <Route path="/Winkelwagen" component={Cart} />
     </Router>
   ),
   root!
