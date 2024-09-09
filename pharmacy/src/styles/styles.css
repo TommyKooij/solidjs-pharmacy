@@ -49,3 +49,7 @@
   content-center
   mx-4;
 }
+
+.icon {
+  border-radius: 50%;
+}
