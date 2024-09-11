@@ -22,8 +22,12 @@ const Header = () => {
               ))}
             </div>
             <div class="btn-group space-x-4">
-              <button class="btn btn-login">Log In</button>
-              <button class="btn btn-register">Registreer</button>
+              <A href="/Login" class="btn btn-login">
+                Log In
+              </A>
+              <A href="/Registreer" class="btn btn-register">
+                Registreer
+              </A>
             </div>
           </div>
         </div>

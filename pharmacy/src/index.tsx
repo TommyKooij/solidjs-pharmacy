@@ -8,6 +8,7 @@ import Home from "./pages/Home";
 import ProductPage from "./pages/Product";
 import Favorites from "./pages/Favorites";
 import Cart from "./pages/Cart";
+import Login from "./pages/Login";
 
 const root = document.getElementById("root");
 
@@ -24,6 +25,7 @@ render(
       <Route path="/Product" component={ProductPage} />
       <Route path="/Favorieten" component={Favorites} />
       <Route path="/Winkelwagen" component={Cart} />
+      <Route path={["/Login", "/Registreer"]} component={Login} />
     </Router>
   ),
   root!
