@@ -7,8 +7,8 @@ const Searchbar = () => {
       />
 
       <div>
-        <form action="" class="w-full max-w-md">
-          <div class="relative flex items-center text-gray-400 focus-within:text-gray-500">
+        <form action="" class="w-full max-w-md self-center">
+          <div class="searchbar">
             <span class="material-symbols-outlined absolute px-2 pointer-events-none">
               search
             </span>

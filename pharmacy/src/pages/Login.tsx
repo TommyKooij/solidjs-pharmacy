@@ -35,7 +35,7 @@ const Login = () => {
             Wachtwoord vergeten?
           </A>
         </div>
-        <button type="button" class="btn btn-register mt-6">
+        <button type="button" class="btn btn-login border border-black mt-6">
           Inloggen
         </button>
         <p class="py-6 text-base">

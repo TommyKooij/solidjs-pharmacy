@@ -3,29 +3,27 @@
 @tailwind utilities;
 
 body {
+  margin: 0;
+  position: relative;
   width: 100%;
 }
 
+/*#region buttons*/
 .btn {
   @apply inline-block 
-  p-2;
+  p-2
+  text-center;
 }
 
 .btn-default {
-  @apply text-gray-900;
-}
-
-.btn-default:hover {
-  @apply text-white;
+  @apply text-gray-900
+  hover:text-white;
 }
 
 .btn-secundary {
-  @apply text-gray-400;
-}
-
-.btn-secundary:hover {
-  @apply text-gray-600
-  font-semibold;
+  @apply text-gray-400
+  hover:text-gray-600
+  hover:font-semibold;
 }
 
 .btn-add {
@@ -57,12 +55,32 @@ body {
   px-4
   rounded-lg;
 }
+/*#endregion */
 
-.btn-group {
-  @apply w-auto 
-  content-center
-  mx-4;
+/*#region components*/
+.header {
+  @apply bg-green-500 
+  px-7 
+  py-4 
+  flex 
+  justify-between;
 }
+
+.navigation {
+  @apply bg-green-100 
+  flex 
+  justify-center 
+  items-center;
+}
+
+.searchbar {
+  @apply relative 
+  flex 
+  items-center 
+  text-gray-400 
+  focus-within:text-gray-500;
+}
+/*#endregion*/
 
 .icon {
   border-radius: 50%;
