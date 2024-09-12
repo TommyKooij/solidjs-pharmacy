@@ -25,8 +25,8 @@ const Carousel = () => {
     <div class="flex justify-center m-8">
       <img src={DefaultImage} alt="product_image" class="size-1/4" />
       <div class="p-4 w-96">
-        <h1 class="text-3xl font-bold">Title</h1>
-        <h3 class="text-lg pt-4">Description</h3>
+        <p class="title-carousel">Title</p>
+        <p class="description-carousel">Description</p>
       </div>
     </div>
   );
@@ -41,7 +41,7 @@ type ProductGroupProps = {
 const ProductGroup = ({ title, pages }: ProductGroupProps) => {
   return (
     <div>
-      <h1 class="ml-10 mb-4 text-green-500 text-2xl font-bold">{title}</h1>
+      <p class="title-group">{title}</p>
       <div class="grid grid-cols-5 gap-5 mx-10">
         {pages.map((page) => (
           <A href="/Product">
@@ -49,9 +49,9 @@ const ProductGroup = ({ title, pages }: ProductGroupProps) => {
               <div class="flex justify-center">
                 <img src={DefaultImage} alt="product_image" class="size-48" />
               </div>
-              <h2 class="text-xl font-bold">Title</h2>
-              <h4 class="text-sm">Description</h4>
-              <h2 class="text-green-500 text-xl font-bold mt-4">Prijs</h2>
+              <p class="title-card">Title</p>
+              <p class="description-card">Description</p>
+              <p class="price-card">Prijs</p>
             </Card>
           </A>
         ))}
@@ -76,28 +76,24 @@ const ReviewGroup = ({ title, reviews }: ReviewGroupProps) => {
 
   return (
     <div class="mt-2">
-      <h1 class="ml-10 mb-4 text-green-500 text-2xl font-bold">{title}</h1>
+      <p class="title-group">{title}</p>
       <div class="grid grid-cols-3 gap-8 mx-10">
         {reviews.map((review) => (
           <Card>
-            <div class="m-1">
+            <div>
+              {stars.map((star) => (
+                <span class="material-symbols-outlined text-gray-900">
+                  star
+                </span>
+              ))}
+            </div>
+            <p class="title-card">Title</p>
+            <p class="description-card">Description</p>
+            <div class="flex space-x-3 mt-4">
+              <img src={DefaultImage} alt="user_icon" class="user-icon" />
               <div>
-                {stars.map((star) => (
-                  <span class="material-symbols-outlined">star</span>
-                ))}
-              </div>
-              <h2 class="text-xl font-bold">Title</h2>
-              <h4 class="text-sm">Description</h4>
-              <div class="flex space-x-3 mt-4">
-                <img
-                  src={DefaultImage}
-                  alt="user_icon"
-                  class="size-10 border border-black icon"
-                />
-                <div>
-                  <h4 class="text-sm">Name</h4>
-                  <h4 class="text-xs text-gray-400">Date</h4>
-                </div>
+                <p class="name-card">Name</p>
+                <p class="date-card">Date</p>
               </div>
             </div>
           </Card>

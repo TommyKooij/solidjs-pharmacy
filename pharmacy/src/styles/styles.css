@@ -15,15 +15,20 @@ body {
   text-center;
 }
 
-.btn-default {
-  @apply text-gray-900
-  hover:text-white;
+.btn-header {
+  @apply text-gray-900 text-lg
+  mx-2;
+}
+.btn-header:hover {
+  @apply text-white;
 }
 
-.btn-secundary {
-  @apply text-gray-400
-  hover:text-gray-600
-  hover:font-semibold;
+.btn-search {
+  @apply text-gray-400;
+}
+.btn-search:hover {
+  @apply text-gray-600
+  font-semibold;
 }
 
 .btn-add {
@@ -36,8 +41,7 @@ body {
 .btn-danger {
   @apply text-white 
   bg-red-600
-  border-2
-  border-red-900
+  border-2 border-red-900
   rounded-lg
   my-4;
 }
@@ -45,25 +49,78 @@ body {
 .btn-login {
   @apply text-gray-900 
   bg-gray-50 
-  px-4
+  px-4 mx-2
   rounded-lg;
 }
 
 .btn-register {
   @apply text-white 
   bg-gray-900 
-  px-4
+  px-4 mx-2
   rounded-lg;
 }
 /*#endregion */
 
+/*region text*/
+.logo {
+  @apply text-white text-6xl 
+  font-bold
+  py-2 px-10;
+}
+
+.title-carousel {
+  @apply text-gray-900 text-3xl 
+  font-bold;
+}
+
+.description-carousel {
+  @apply text-gray-900 text-lg 
+  pt-4;
+}
+
+.title-group {
+  @apply text-green-500 text-2xl 
+  font-bold 
+  mb-4 ml-10;
+}
+
+.title-card {
+  @apply text-gray-900 text-xl 
+  font-bold;
+}
+
+.description-card {
+  @apply text-gray-900 text-sm
+  pt-2 pb-6;
+}
+
+.price-card {
+  @apply text-green-500 text-xl 
+  font-bold;
+}
+
+.name-card {
+  @apply text-gray-900 text-sm
+  font-bold;
+}
+
+.date-card {
+  @apply text-gray-400 text-xs;
+}
+
+.name-section-footer {
+  @apply text-gray-900 text-base
+  font-bold;
+}
+/*endregion*/
+
 /*#region components*/
 .header {
   @apply bg-green-500 
-  px-7 
-  py-4 
+  px-7 py-4 
   flex 
-  justify-between;
+  justify-between
+  items-center;
 }
 
 .navigation {
@@ -77,11 +134,37 @@ body {
   @apply relative 
   flex 
   items-center 
-  text-gray-400 
-  focus-within:text-gray-500;
+  text-gray-400;
+}
+.searchbar:focus {
+  @apply text-gray-500;
+}
+
+.input-field {
+  @apply placeholder-gray-400 
+  ring-1 ring-green-600 
+  px-2 py-1 pl-10 
+  rounded-xl 
+  border-none;
+}
+.input-field:focus {
+  @apply placeholder-gray-500 
+  ring-2 ring-green-800
+  outline-none;
+}
+
+.footer {
+  @apply bg-green-100 
+  min-h-60 
+  mt-6 py-6 px-10
+  border-t border-green-500
+  grid grid-cols-5 
+  gap-5;
 }
 /*#endregion*/
 
-.icon {
+.user-icon {
   border-radius: 50%;
+  height: 42px;
+  border: 1px solid black;
 }

@@ -6,21 +6,19 @@ import Linkedin from "../assets/icons/linkedin.svg";
 // * Footer content
 const Footer = () => {
   return (
-    <div class="bg-green-100 w-full min-h-60 mt-6 border-t border-green-500">
-      <div class="grid grid-cols-5 gap-5 p-6">
-        <div>
-          <h4 class="text-base font-bold">PHARMACY</h4>
-          <div class="flex pt-2 space-x-3">
-            <img src={Twitter} alt="twitter" class="size-6" />
-            <img src={Instagram} alt="instagram" class="size-6" />
-            <img src={Facebook} alt="facebook" class="size-6" />
-            <img src={Linkedin} alt="linkedin" class="size-6" />
-          </div>
+    <div class="footer">
+      <div>
+        <p class="title-card">PHARMACY</p>
+        <div class="flex pt-2 space-x-3">
+          <img src={Twitter} alt="twitter" class="size-6" />
+          <img src={Instagram} alt="instagram" class="size-6" />
+          <img src={Facebook} alt="facebook" class="size-6" />
+          <img src={Linkedin} alt="linkedin" class="size-6" />
         </div>
-        <AboutUs />
-        <CustomerService />
-        <Contact />
       </div>
+      <AboutUs />
+      <CustomerService />
+      <Contact />
     </div>
   );
 };
@@ -29,7 +27,7 @@ const Footer = () => {
 const AboutUs = () => {
   return (
     <div>
-      <h4 class="text-sm font-bold">Over Ons</h4>
+      <p class="name-section-footer">Over Ons</p>
     </div>
   );
 };
@@ -38,7 +36,7 @@ const AboutUs = () => {
 const CustomerService = () => {
   return (
     <div>
-      <h4 class="text-sm font-bold">Klantenservice</h4>
+      <p class="name-section-footer">Klantenservice</p>
     </div>
   );
 };
@@ -47,7 +45,7 @@ const CustomerService = () => {
 const Contact = () => {
   return (
     <div>
-      <h4 class="text-sm font-bold">Contact</h4>
+      <p class="name-section-footer">Contact</p>
     </div>
   );
 };

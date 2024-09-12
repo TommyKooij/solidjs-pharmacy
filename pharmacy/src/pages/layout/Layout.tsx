@@ -4,9 +4,9 @@ import Header from "../../components/Header";
 // * Standard page layout of each page inside the application
 const PageLayout = (props) => {
   return (
-    <div>
+    <div class="min-w-max">
       <Header />
-      <div class="p-4">{props.children}</div>
+      <div class="p-4 my-4">{props.children}</div>
       <Footer />
     </div>
   );

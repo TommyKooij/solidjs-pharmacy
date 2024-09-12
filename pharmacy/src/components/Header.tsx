@@ -8,29 +8,29 @@ const Header = () => {
 
   return (
     <>
-      <div class="mb-4 min-w-max">
-        <div class="header">
-          <A href="/" class="text-white py-2 px-10 text-6xl font-bold">
-            PHARMACY
-          </A>
-          <div class="flex self-center">
+      <div class="header">
+        <A href="/" class="logo">
+          PHARMACY
+        </A>
+        <div class="flex space-x-4">
+          <div>
             {pages.map((page) => (
-              <A href={`/${page}`} class="btn btn-default text-lg mx-2">
+              <A href={`/${page}`} class="btn btn-header">
                 {page}
               </A>
             ))}
-            <div class="mx-4 space-x-4">
-              <A href="/Login" class="btn btn-login">
-                Log In
-              </A>
-              <A href="/Registreer" class="btn btn-register">
-                Registreer
-              </A>
-            </div>
+          </div>
+          <div>
+            <A href="/Login" class="btn btn-login">
+              Log In
+            </A>
+            <A href="/Registreer" class="btn btn-register">
+              Registreer
+            </A>
           </div>
         </div>
-        <Navigation />
       </div>
+      <Navigation />
     </>
   );
 };
@@ -54,7 +54,7 @@ const Navigation = () => {
         <div class="mx-8">
           {sections.map((section) => (
             <>
-              <A href={`/${section}`} class="btn btn-secundary">
+              <A href={`/${section}`} class="btn btn-search">
                 {section}
               </A>
               <span class="text-gray-400">|</span>
