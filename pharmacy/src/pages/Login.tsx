@@ -2,14 +2,10 @@ import { A } from "@solidjs/router";
 
 const Login = () => {
   return (
-    <div class="flex justify-center m-20">
-      <div class="border border-gray-400 p-10 w-1/3">
-        <h1 class="text-green-500 w-auto text-6xl font-bold align-middle">
-          PHARMACY
-        </h1>
-        <h2 class="text-black w-auto pt-8 text-3xl font-bold align-middle">
-          Inloggen
-        </h2>
+    <div class="flex justify-center min-w-max m-20">
+      <div class="border border-gray-400 p-10">
+        <p class="text-green-500 text-6xl font-bold">PHARMACY</p>
+        <p class="text-black pt-8 text-3xl font-bold">Inloggen</p>
         <div class="pt-8">
           <p class="text-gray-400 py-1 text-lg">Email</p>
           <input
@@ -30,26 +26,26 @@ const Login = () => {
             class="border border-black w-full px-2 py-1 rounded-md"
           />
         </div>
-        <div class="py-3">
-          <A href="" class="text-sm underline">
+        <div class="mt-1 mb-4">
+          <A href="" class="link">
             Wachtwoord vergeten?
           </A>
         </div>
-        <button type="button" class="btn btn-login border border-black mt-6">
+        <button type="button" class="btn btn-register">
           Inloggen
         </button>
-        <p class="py-6 text-base">
+        <p class="py-6">
           Nog geen account? Registreer{" "}
-          <A href="" class="underline">
+          <A href="" class="link">
             hier
           </A>
           .
         </p>
-        <div class="w-full flex justify-evenly">
-          <A href="" class="text-base underline">
+        <div class="flex justify-evenly w-full">
+          <A href="" class="link">
             Privacy
           </A>
-          <A href="" class="text-base underline">
+          <A href="" class="link">
             Cookies
           </A>
         </div>

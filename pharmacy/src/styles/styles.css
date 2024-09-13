@@ -8,79 +8,7 @@ body {
   width: 100%;
 }
 
-/*#region buttons*/
-.btn {
-  @apply inline-block 
-  p-2
-  text-center
-  align-middle;
-}
-
-.btn-header {
-  @apply text-gray-900 text-lg
-  mx-2;
-}
-.btn-header:hover {
-  @apply text-white
-  font-semibold
-  underline;
-}
-
-.btn-search {
-  @apply text-gray-400;
-}
-.btn-search:hover {
-  @apply text-gray-600
-  font-semibold;
-}
-
-.btn-add {
-  @apply text-white 
-  bg-green-500
-  px-2
-  border-b-2 border-green-900
-  rounded-lg;
-}
-.btn-add:hover {
-  @apply bg-green-400
-  border-green-800;
-}
-
-.btn-remove {
-  @apply text-white 
-  bg-red-600
-  my-4
-  border-2 border-red-900
-  rounded-lg;
-}
-
-.btn-login {
-  @apply text-gray-900 
-  bg-gray-50 
-  px-4 mx-2
-  border border-white
-  rounded-lg;
-}
-
-.btn-register {
-  @apply text-white 
-  bg-gray-900 
-  px-4 mx-2
-  border border-gray-900
-  rounded-lg;
-}
-
-.btn-favorite {
-  @apply text-green-500;
-}
-.btn-favorite:hover {
-  border-radius: 50%;
-  @apply text-white
-  bg-green-300;
-}
-/*#endregion */
-
-/*region text*/
+/*#region text*/
 .logo {
   @apply text-white text-6xl 
   font-bold
@@ -136,7 +64,92 @@ body {
   @apply text-gray-900 text-base
   font-bold;
 }
-/*endregion*/
+/*#endregion*/
+
+/*#region buttons*/
+.btn {
+  @apply inline-block 
+  p-2
+  text-center
+  align-middle;
+}
+
+.btn-header {
+  @apply text-gray-900 text-lg
+  mx-2;
+}
+.btn-header:hover {
+  @apply text-white
+  font-semibold;
+}
+
+.btn-search {
+  @apply text-gray-400;
+}
+.btn-search:hover {
+  @apply text-gray-600
+  font-semibold;
+}
+
+.btn-add {
+  @apply text-white 
+  bg-green-500
+  px-2
+  border-b-2 border-green-900
+  rounded-lg;
+}
+.btn-add:hover {
+  @apply bg-green-400
+  border-green-800;
+}
+
+.btn-remove {
+  @apply text-white 
+  bg-red-600
+  my-4
+  border-2 border-red-900
+  rounded-lg;
+}
+
+.btn-login {
+  @apply text-gray-900 
+  bg-gray-50 
+  px-4 mx-2
+  border border-white
+  rounded-lg;
+}
+
+.btn-register {
+  @apply text-white 
+  bg-gray-900 
+  px-4 mx-2
+  border border-gray-900
+  rounded-lg;
+}
+.btn-register:hover {
+  @apply bg-gray-700
+  border-gray-700;
+}
+
+.btn-favorite {
+  @apply text-green-500;
+}
+.btn-favorite:hover {
+  border-radius: 50%;
+  @apply text-white
+  bg-green-300;
+}
+/*#endregion */
+
+/*#region links*/
+.link {
+  @apply text-gray-900 text-base
+  underline;
+}
+.link:hover {
+  @apply text-blue-700;
+}
+/*#endregion*/
 
 /*#region components*/
 .header {
@@ -207,6 +220,6 @@ body {
 
 .user-icon {
   border-radius: 50%;
-  height: 42px;
-  border: 1px solid black;
+  @apply h-10
+  border border-black;
 }
