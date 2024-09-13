@@ -25,8 +25,8 @@ const Carousel = () => {
     <div class="flex justify-center m-8">
       <img src={DefaultImage} alt="product_image" class="size-1/4" />
       <div class="p-4 w-96">
-        <p class="title-carousel">Title</p>
-        <p class="description-carousel">Description</p>
+        <p class="product-title">Title</p>
+        <p class="product-descript">Description</p>
       </div>
     </div>
   );

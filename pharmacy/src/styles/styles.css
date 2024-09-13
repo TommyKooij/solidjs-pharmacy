@@ -31,25 +31,27 @@ body {
   font-semibold;
 }
 
-.btn-add {
+.btn-cart {
   @apply text-white 
   bg-green-500
-  px-4
+  px-2
+  border border-green-500
   rounded-lg;
 }
 
 .btn-danger {
   @apply text-white 
   bg-red-600
+  my-4
   border-2 border-red-900
-  rounded-lg
-  my-4;
+  rounded-lg;
 }
 
 .btn-login {
   @apply text-gray-900 
   bg-gray-50 
   px-4 mx-2
+  border border-white
   rounded-lg;
 }
 
@@ -57,7 +59,27 @@ body {
   @apply text-white 
   bg-gray-900 
   px-4 mx-2
+  border border-gray-900
   rounded-lg;
+}
+
+.btn-favorite {
+  @apply text-green-500
+  ml-4
+  align-middle;
+}
+.btn-favorite:hover {
+  @apply border-2 border-green-500
+  rounded-lg;
+}
+
+.btn-favorites {
+  @apply text-green-500;
+}
+.btn-favorites:hover {
+  border-radius: 50%;
+  @apply text-white
+  bg-green-300;
 }
 /*#endregion */
 
@@ -68,14 +90,19 @@ body {
   py-2 px-10;
 }
 
-.title-carousel {
+.product-title {
   @apply text-gray-900 text-3xl 
   font-bold;
 }
 
-.description-carousel {
+.product-description {
   @apply text-gray-900 text-lg 
   pt-4;
+}
+
+.product-price {
+  @apply text-green-500 text-5xl 
+  font-bold;
 }
 
 .title-group {
@@ -95,7 +122,7 @@ body {
 }
 
 .price-card {
-  @apply text-green-500 text-xl 
+  @apply text-green-500 text-2xl 
   font-bold;
 }
 
