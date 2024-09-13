@@ -17,13 +17,13 @@ const ProductPage = () => {
             <p class="product-price">Prijs</p>
             <p class="product-description">Description</p>
             <div class="pt-4">
-              <button type="button" class="btn btn-cart">
+              <button type="button" class="btn btn-add">
                 <span class="material-symbols-outlined align-middle">
                   shopping_cart
                 </span>
                 <span class="pl-2">Voeg toe aan winkelmand</span>
               </button>
-              <button type="button" class="btn btn-favorite">
+              <button type="button" class="btn btn-favorite ml-2">
                 <span class="material-symbols-outlined align-middle">
                   favorite
                 </span>

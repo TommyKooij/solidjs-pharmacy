@@ -8,19 +8,17 @@ const Favorites = () => {
 
   return (
     <PageLayout>
-      <h1 class="ml-10 mb-4 text-green-500 text-2xl font-bold">
-        Favoriete Producten
-      </h1>
-      <div class="grid grid-cols-5 gap-5 mx-10">
+      <p class="title-group">Favoriete Producten</p>
+      <div class="product-group">
         {favorites.map((favorite) => (
           <A href="/Product">
             <Card>
               <div class="flex justify-center">
                 <img src={DefaultImage} alt="product_image" class="size-48" />
               </div>
-              <h2 class="text-xl font-bold">Title</h2>
-              <h4 class="text-sm">Description</h4>
-              <h2 class="text-green-500 text-xl font-bold mt-4">Prijs</h2>
+              <h2 class="title-card">Title</h2>
+              <h4 class="description-card">Description</h4>
+              <h2 class="price-card">Prijs</h2>
             </Card>
           </A>
         ))}

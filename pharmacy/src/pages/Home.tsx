@@ -42,7 +42,7 @@ const ProductGroup = ({ title, pages }: ProductGroupProps) => {
   return (
     <div>
       <p class="title-group">{title}</p>
-      <div class="grid grid-cols-5 gap-5 mx-10">
+      <div class="product-group">
         {pages.map((page) => (
           <A href="/Product">
             <Card>
@@ -77,7 +77,7 @@ const ReviewGroup = ({ title, reviews }: ReviewGroupProps) => {
   return (
     <div class="mt-2">
       <p class="title-group">{title}</p>
-      <div class="grid grid-cols-3 gap-8 mx-10">
+      <div class="review-group">
         {reviews.map((review) => (
           <Card>
             <div>

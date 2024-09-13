@@ -12,7 +12,8 @@ body {
 .btn {
   @apply inline-block 
   p-2
-  text-center;
+  text-center
+  align-middle;
 }
 
 .btn-header {
@@ -20,7 +21,9 @@ body {
   mx-2;
 }
 .btn-header:hover {
-  @apply text-white;
+  @apply text-white
+  font-semibold
+  underline;
 }
 
 .btn-search {
@@ -31,15 +34,19 @@ body {
   font-semibold;
 }
 
-.btn-cart {
+.btn-add {
   @apply text-white 
   bg-green-500
   px-2
-  border border-green-500
+  border-b-2 border-green-900
   rounded-lg;
 }
+.btn-add:hover {
+  @apply bg-green-400
+  border-green-800;
+}
 
-.btn-danger {
+.btn-remove {
   @apply text-white 
   bg-red-600
   my-4
@@ -64,19 +71,9 @@ body {
 }
 
 .btn-favorite {
-  @apply text-green-500
-  ml-4
-  align-middle;
-}
-.btn-favorite:hover {
-  @apply border-2 border-green-500
-  rounded-lg;
-}
-
-.btn-favorites {
   @apply text-green-500;
 }
-.btn-favorites:hover {
+.btn-favorite:hover {
   border-radius: 50%;
   @apply text-white
   bg-green-300;
@@ -178,6 +175,24 @@ body {
   @apply placeholder-gray-500 
   ring-2 ring-green-800
   outline-none;
+}
+
+.product-group {
+  @apply grid grid-cols-5 
+  gap-5 
+  mx-10;
+}
+
+.review-group {
+  @apply grid grid-cols-3 
+  gap-8 
+  mx-10;
+}
+
+.product-group-cart {
+  @apply grid grid-flow-row 
+  space-y-6 
+  mx-10;
 }
 
 .footer {
