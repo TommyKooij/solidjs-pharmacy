@@ -2,20 +2,30 @@ import Card from "../components/Card";
 import PageLayout from "./layout/Layout";
 import DefaultImage from "../assets/1077596-200.png";
 import { A } from "@solidjs/router";
+import { createResource, For, Show } from "solid-js";
+import { Product } from "../types/types";
+
+async function fetchProducts() {
+  const res = await fetch("http://localhost:4000/products");
+  return res.json();
+}
 
 // * Home page content
 const Home = () => {
-  const pages = [1, 2, 3, 4, 5];
+  const [products] = createResource(fetchProducts);
+
   const reviews = [1, 2, 3];
 
   return (
     <PageLayout>
-      <div class="space-y-14">
-        <Carousel />
-        <ProductGroup title="Nieuwe Producten" pages={pages} />
-        <ProductGroup title="Populaire Producten" pages={pages} />
-        <ReviewGroup title="Wat vinden anderen van ons" reviews={reviews} />
-      </div>
+      <Show when={products()} fallback={<p>Loading...</p>}>
+        <div class="space-y-14">
+          <Carousel />
+          <ProductGroup title="Nieuwe Producten" products={products()} />
+          <ProductGroup title="Populaire Producten" products={products()} />
+          <ReviewGroup title="Wat vinden anderen van ons" reviews={reviews} />
+        </div>
+      </Show>
     </PageLayout>
   );
 };
@@ -34,27 +44,29 @@ const Carousel = () => {
 
 type ProductGroupProps = {
   title: string;
-  pages: number[];
+  products: Product[];
 };
 
 // * Each product group takes 5 products and shows them in a row
-const ProductGroup = ({ title, pages }: ProductGroupProps) => {
+const ProductGroup = ({ title, products }: ProductGroupProps) => {
   return (
     <div>
       <p class="title-group">{title}</p>
       <div class="product-group">
-        {pages.map((page) => (
-          <A href="/Product">
-            <Card>
-              <div class="flex justify-center">
-                <img src={DefaultImage} alt="product_image" class="size-48" />
-              </div>
-              <p class="title-card">Title</p>
-              <p class="description-card">Description</p>
-              <p class="price-card">Prijs</p>
-            </Card>
-          </A>
-        ))}
+        <For each={products}>
+          {(product) => (
+            <A href="/Product">
+              <Card>
+                <div class="flex justify-center">
+                  <img src={DefaultImage} alt="product_image" class="size-48" />
+                </div>
+                <p class="title-card">{product.name}</p>
+                <p class="description-card">{product.description}</p>
+                <p class="price-card">€{product.price}</p>
+              </Card>
+            </A>
+          )}
+        </For>
       </div>
     </div>
   );
@@ -78,26 +90,28 @@ const ReviewGroup = ({ title, reviews }: ReviewGroupProps) => {
     <div class="mt-2">
       <p class="title-group">{title}</p>
       <div class="review-group">
-        {reviews.map((review) => (
-          <Card>
-            <div>
-              {stars.map((star) => (
-                <span class="material-symbols-outlined text-gray-900">
-                  star
-                </span>
-              ))}
-            </div>
-            <p class="title-card">Title</p>
-            <p class="description-card">Description</p>
-            <div class="flex space-x-3 mt-4">
-              <img src={DefaultImage} alt="user_icon" class="user-icon" />
+        <For each={reviews}>
+          {(review) => (
+            <Card>
               <div>
-                <p class="name-card">Name</p>
-                <p class="date-card">Date</p>
+                {stars.map((star) => (
+                  <span class="material-symbols-outlined text-gray-900">
+                    star
+                  </span>
+                ))}
               </div>
-            </div>
-          </Card>
-        ))}
+              <p class="title-card">Title</p>
+              <p class="description-card">Description</p>
+              <div class="flex space-x-3 mt-4">
+                <img src={DefaultImage} alt="user_icon" class="user-icon" />
+                <div>
+                  <p class="name-card">Name</p>
+                  <p class="date-card">Date</p>
+                </div>
+              </div>
+            </Card>
+          )}
+        </For>
       </div>
     </div>
   );

@@ -2,13 +2,113 @@
   "products": [
     {
       "id": 1,
-      "title": "",
-      "description": "",
+      "name": "name 1",
+      "description": "Description 1",
       "image": "",
-      "price": "",
+      "price": 9.99,
       "type": "",
       "dose": "",
-      "addedDate": ""
+      "addedDate": "2024-09-01",
+      "viewCount": 1
+    },
+    {
+      "id": 2,
+      "name": "name 2",
+      "description": "Description 2",
+      "image": "",
+      "price": 9.99,
+      "type": "",
+      "dose": "",
+      "addedDate": "2024-09-02",
+      "viewCount": 2
+    },
+    {
+      "id": 3,
+      "name": "name 3",
+      "description": "Description 3",
+      "image": "",
+      "price": 9.99,
+      "type": "",
+      "dose": "",
+      "addedDate": "2024-09-03",
+      "viewCount": 3
+    },
+    {
+      "id": 4,
+      "name": "name 4",
+      "description": "Description 4",
+      "image": "",
+      "price": 9.99,
+      "type": "",
+      "dose": "",
+      "addedDate": "2024-09-04",
+      "viewCount": 4
+    },
+    {
+      "id": 5,
+      "name": "name 5",
+      "description": "Description 5",
+      "image": "",
+      "price": 9.99,
+      "type": "",
+      "dose": "",
+      "addedDate": "2024-09-05",
+      "viewCount": 5
+    },
+    {
+      "id": 6,
+      "name": "name 6",
+      "description": "Description 6",
+      "image": "",
+      "price": 9.99,
+      "type": "",
+      "dose": "",
+      "addedDate": "2024-09-06",
+      "viewCount": 6
+    },
+    {
+      "id": 7,
+      "name": "name 7",
+      "description": "Description 7",
+      "image": "",
+      "price": 9.99,
+      "type": "",
+      "dose": "",
+      "addedDate": "2024-09-07",
+      "viewCount": 7
+    },
+    {
+      "id": 8,
+      "name": "name 8",
+      "description": "Description 8",
+      "image": "",
+      "price": 9.99,
+      "type": "",
+      "dose": "",
+      "addedDate": "2024-09-08",
+      "viewCount": 8
+    },
+    {
+      "id": 9,
+      "name": "name 9",
+      "description": "Description 9",
+      "image": "",
+      "price": 9.99,
+      "type": "",
+      "dose": "",
+      "addedDate": "2024-09-09",
+      "viewCount": 9
+    },
+    {
+      "id": 10,
+      "name": "name 10",
+      "description": "Description 10",
+      "image": "",
+      "price": 9.99,
+      "type": "",
+      "dose": "",
+      "addedDate": "2024-09-10",
+      "viewCount": 10
     }
   ]
 }
