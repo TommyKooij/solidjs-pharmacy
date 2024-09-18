@@ -28,7 +28,7 @@ const Cart = () => {
                   <div class="ml-2">
                     <h2 class="title-card">{item.name}</h2>
                     <h4 class="description-card">{item.description}</h4>
-                    <h2 class="price-card">{item.price}</h2>
+                    <h2 class="price-card">€{item.price}</h2>
                     <button type="button" class="btn btn-remove">
                       <span class="material-symbols-outlined align-middle">
                         delete

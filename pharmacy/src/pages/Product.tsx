@@ -2,6 +2,7 @@ import PageLayout from "./layout/Layout";
 import DefaultImage from "../assets/1077596-200.png";
 import { useParams } from "@solidjs/router";
 import { createResource, Show } from "solid-js";
+import { useCartContext } from "../context/CartContext";
 
 async function fetchProduct(id: any) {
   const res = await fetch("http://localhost:4000/products/" + id);
@@ -11,6 +12,15 @@ async function fetchProduct(id: any) {
 const ProductPage = () => {
   const params = useParams();
   const [product] = createResource(params.id, fetchProduct);
+  const { items, setItems } = useCartContext();
+
+  function addProduct() {
+    const exists = items.find((prod: any) => prod.id === product().id);
+
+    if (!exists) {
+      setItems([...items, {...product()}])
+    }
+  }
 
   return (
     <>
@@ -28,7 +38,7 @@ const ProductPage = () => {
               <p class="product-price">€{product().price}</p>
               <p class="product-description">{product().description}</p>
               <div class="pt-4">
-                <button type="button" class="btn btn-add">
+                <button type="button" onClick={addProduct} class="btn btn-add">
                   <span class="material-symbols-outlined align-middle">
                     shopping_cart
                   </span>
