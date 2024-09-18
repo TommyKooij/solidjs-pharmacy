@@ -153,7 +153,8 @@ body {
 
 /*#region components*/
 .header {
-  @apply bg-green-500 
+  @apply inset-x-0 top-0
+  bg-green-500 
   px-7 py-4 
   flex 
   justify-between
@@ -209,7 +210,8 @@ body {
 }
 
 .footer {
-  @apply bg-green-100 
+  @apply inset-x-0 bottom-0
+  bg-green-100 
   min-h-60 
   mt-6 py-6 px-10
   border-t border-green-500
@@ -222,4 +224,10 @@ body {
   border-radius: 50%;
   @apply h-10
   border border-black;
+}
+
+.product-img {
+  max-width: 400px;
+  height: auto;
+  display: block;
 }

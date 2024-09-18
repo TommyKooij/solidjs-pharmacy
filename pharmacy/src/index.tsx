@@ -22,7 +22,7 @@ render(
   () => (
     <Router root={App}>
       <Route path="/" component={Home} />
-      <Route path="/Product" component={ProductPage} />
+      <Route path="/Producten/:id" component={ProductPage} />
       <Route path="/Favorieten" component={Favorites} />
       <Route path="/Winkelwagen" component={Cart} />
       <Route path={["/Login", "/Registreer"]} component={Login} />
