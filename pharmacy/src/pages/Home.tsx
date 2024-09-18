@@ -3,27 +3,31 @@ import PageLayout from "./layout/Layout";
 import DefaultImage from "../assets/1077596-200.png";
 import { A } from "@solidjs/router";
 import { createResource, For, Show } from "solid-js";
-import { Product } from "../types/types";
+import { Product, Review } from "../types/types";
 
 async function fetchProducts() {
   const res = await fetch("http://localhost:4000/products");
   return res.json();
 }
 
+async function fetchReviews() {
+  const res = await fetch("http://localhost:4001/reviews");
+  return res.json();
+}
+
 // * Home page content
 const Home = () => {
   const [products] = createResource(fetchProducts);
-
-  const reviews = [1, 2, 3];
+  const [reviews] = createResource(fetchReviews);
 
   return (
     <PageLayout>
-      <Show when={products()} fallback={<p>Loading...</p>}>
+      <Show when={products() && reviews()} fallback={<p>Loading...</p>}>
         <div class="space-y-14">
           <Carousel />
           <ProductGroup title="Nieuwe Producten" products={products()} />
           <ProductGroup title="Populaire Producten" products={products()} />
-          <ReviewGroup title="Wat vinden anderen van ons" reviews={reviews} />
+          <ReviewGroup title="Wat vinden anderen van ons" reviews={reviews()} />
         </div>
       </Show>
     </PageLayout>
@@ -74,7 +78,7 @@ const ProductGroup = ({ title, products }: ProductGroupProps) => {
 
 type ReviewGroupProps = {
   title: string;
-  reviews: number[];
+  reviews: Review[];
 };
 
 // * The review group takes 3 reviews and shows them in a row
@@ -100,13 +104,15 @@ const ReviewGroup = ({ title, reviews }: ReviewGroupProps) => {
                   </span>
                 ))}
               </div>
-              <p class="title-card">Title</p>
-              <p class="description-card">Description</p>
+              <p class="title-card">{review.title}</p>
+              <p class="description-card">{review.description}</p>
               <div class="flex space-x-3 mt-4">
                 <img src={DefaultImage} alt="user_icon" class="user-icon" />
                 <div>
-                  <p class="name-card">Name</p>
-                  <p class="date-card">Date</p>
+                  <p class="name-card">{review.customerName}</p>
+                  <p class="date-card">
+                    Toegevoegd op: {review.addedDate.toString()}
+                  </p>
                 </div>
               </div>
             </Card>

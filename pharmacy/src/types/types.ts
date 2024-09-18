@@ -9,3 +9,12 @@ export type Product = {
   addedDate: Date;
   viewCount: number;
 };
+
+export type Review = {
+  id: number;
+  title: string;
+  description: string;
+  stars: number;
+  customerName: string;
+  addedDate: Date;
+};

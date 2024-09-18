@@ -191,7 +191,7 @@ body {
 }
 
 .product-group {
-  @apply grid grid-cols-5 
+  @apply grid grid-cols-5
   gap-5 
   mx-10;
 }
