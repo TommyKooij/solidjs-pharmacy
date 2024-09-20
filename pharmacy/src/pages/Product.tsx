@@ -1,9 +1,10 @@
 import PageLayout from "./layout/Layout";
 import DefaultImage from "../assets/1077596-200.png";
 import { useParams } from "@solidjs/router";
-import { createResource, createSignal, Show } from "solid-js";
+import { createResource, Show } from "solid-js";
 import { useCartContext } from "../context/CartContext";
 import { useFavoritesContext } from "../context/FavoriteContext";
+import { Product } from "../types/types";
 
 async function fetchProduct(id: any) {
   const res = await fetch(`http://localhost:4000/products/${id}`);
@@ -17,7 +18,7 @@ const ProductPage = () => {
   const { favorites, setFavorites } = useFavoritesContext();
 
   function addProduct() {
-    const exists = items.find((prod: any) => prod.id === product().id);
+    const exists = items.find((prod: Product) => prod.id === product().id);
 
     if (!exists) {
       setItems([...items, { ...product() }]);
@@ -25,7 +26,7 @@ const ProductPage = () => {
   }
 
   function favoriteProduct() {
-    const exists = favorites.find((prod: any) => prod.id === product().id);
+    const exists = favorites.find((prod: Product) => prod.id === product().id);
 
     if (!exists) {
       setFavorites([...favorites, { ...product() }]);

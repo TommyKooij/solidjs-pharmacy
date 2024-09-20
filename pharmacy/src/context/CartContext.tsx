@@ -1,5 +1,6 @@
 import { createContext, useContext } from "solid-js";
 import { createStore } from "solid-js/store";
+import { Product } from "../types/types";
 
 export const CartContext = createContext();
 
@@ -8,7 +9,7 @@ export const useCartContext = () => {
 };
 
 const CartContextProvider = (props: any) => {
-  const [items, setItems] = createStore([]);
+  const [items, setItems] = createStore<Product[]>([]);
 
   return (
     <CartContext.Provider value={{ items, setItems }}>

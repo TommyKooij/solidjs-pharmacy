@@ -1,5 +1,6 @@
 import { createContext, useContext } from "solid-js";
 import { createStore } from "solid-js/store";
+import { Product } from "../types/types";
 
 export const FavoritesContext = createContext();
 
@@ -8,7 +9,7 @@ export const useFavoritesContext = () => {
 };
 
 const FavoritesContextProvider = (props: any) => {
-  const [favorites, setFavorites] = createStore([]);
+  const [favorites, setFavorites] = createStore<Product[]>([]);
 
   return (
     <FavoritesContext.Provider value={{ favorites, setFavorites }}>

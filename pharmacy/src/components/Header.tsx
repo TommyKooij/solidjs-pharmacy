@@ -36,7 +36,7 @@ const Header = () => {
 };
 
 const Navigation = () => {
-  const types = ["Soorten", "Voeding", "Kinderen", "Dieren"];
+  const types = ["Voeding", "Kinderen", "Dieren", "Volwassenen"];
 
   return (
     <>
