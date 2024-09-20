@@ -15,7 +15,7 @@ const Cart = () => {
       <div class="product-group-cart">
         <For each={items}>
           {(item: Product) => (
-            <A href={"/Producten/" + item.id}>
+            <A href={"/Producten/" + item.type + "/" + item.id}>
               <Card>
                 <div class="flex">
                   <div class="flex justify-center">

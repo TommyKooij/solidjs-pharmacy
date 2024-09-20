@@ -2,7 +2,7 @@ import Footer from "../../components/Footer";
 import Header from "../../components/Header";
 
 // * Standard page layout of each page inside the application
-const PageLayout = (props) => {
+const PageLayout = (props: any) => {
   return (
     <div class="min-w-max">
       <Header />

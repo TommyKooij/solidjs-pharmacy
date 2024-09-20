@@ -8,10 +8,10 @@ export const useFavoritesContext = () => {
 };
 
 const FavoritesContextProvider = (props: any) => {
-  const [items, setItems] = createStore([]);
+  const [favorites, setFavorites] = createStore([]);
 
   return (
-    <FavoritesContext.Provider value={{ items, setItems }}>
+    <FavoritesContext.Provider value={{ favorites, setFavorites }}>
       {props.children}
     </FavoritesContext.Provider>
   );

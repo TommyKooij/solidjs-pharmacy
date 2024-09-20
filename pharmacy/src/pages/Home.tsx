@@ -59,7 +59,7 @@ const ProductGroup = ({ title, products }: ProductGroupProps) => {
       <div class="product-group">
         <For each={products}>
           {(product) => (
-            <A href={"/Producten/" + product.id}>
+            <A href={"/Producten/" + product.type + "/" + product.id}>
               <Card>
                 <div class="flex justify-center">
                   <img src={DefaultImage} alt="product_image" class="size-48" />

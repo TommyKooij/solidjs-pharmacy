@@ -6,7 +6,7 @@
       "description": "Description 1",
       "image": "",
       "price": 9.99,
-      "type": "",
+      "type": "Voeding",
       "dose": "",
       "addedDate": "2024-09-01",
       "viewCount": 1
@@ -17,7 +17,7 @@
       "description": "Description 2",
       "image": "",
       "price": 9.99,
-      "type": "",
+      "type": "Voeding",
       "dose": "",
       "addedDate": "2024-09-02",
       "viewCount": 2
@@ -28,7 +28,7 @@
       "description": "Description 3",
       "image": "",
       "price": 9.99,
-      "type": "",
+      "type": "Voeding",
       "dose": "",
       "addedDate": "2024-09-03",
       "viewCount": 3
@@ -39,7 +39,7 @@
       "description": "Description 4",
       "image": "",
       "price": 9.99,
-      "type": "",
+      "type": "Voeding",
       "dose": "",
       "addedDate": "2024-09-04",
       "viewCount": 4
@@ -50,7 +50,7 @@
       "description": "Description 5",
       "image": "",
       "price": 9.99,
-      "type": "",
+      "type": "Voeding",
       "dose": "",
       "addedDate": "2024-09-05",
       "viewCount": 5
@@ -61,7 +61,7 @@
       "description": "Description 6",
       "image": "",
       "price": 9.99,
-      "type": "",
+      "type": "Voeding",
       "dose": "",
       "addedDate": "2024-09-06",
       "viewCount": 6
@@ -72,7 +72,7 @@
       "description": "Description 7",
       "image": "",
       "price": 9.99,
-      "type": "",
+      "type": "Voeding",
       "dose": "",
       "addedDate": "2024-09-07",
       "viewCount": 7
@@ -83,7 +83,7 @@
       "description": "Description 8",
       "image": "",
       "price": 9.99,
-      "type": "",
+      "type": "Voeding",
       "dose": "",
       "addedDate": "2024-09-08",
       "viewCount": 8
@@ -94,7 +94,7 @@
       "description": "Description 9",
       "image": "",
       "price": 9.99,
-      "type": "",
+      "type": "Voeding",
       "dose": "",
       "addedDate": "2024-09-09",
       "viewCount": 9
@@ -105,7 +105,7 @@
       "description": "Description 10",
       "image": "",
       "price": 9.99,
-      "type": "",
+      "type": "Voeding",
       "dose": "",
       "addedDate": "2024-09-10",
       "viewCount": 10

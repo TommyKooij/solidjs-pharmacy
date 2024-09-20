@@ -1,11 +1,12 @@
 import PageLayout from "./layout/Layout";
 import DefaultImage from "../assets/1077596-200.png";
 import { useParams } from "@solidjs/router";
-import { createResource, Show } from "solid-js";
+import { createResource, createSignal, Show } from "solid-js";
 import { useCartContext } from "../context/CartContext";
+import { useFavoritesContext } from "../context/FavoriteContext";
 
 async function fetchProduct(id: any) {
-  const res = await fetch("http://localhost:4000/products/" + id);
+  const res = await fetch(`http://localhost:4000/products/${id}`);
   return res.json();
 }
 
@@ -13,12 +14,21 @@ const ProductPage = () => {
   const params = useParams();
   const [product] = createResource(params.id, fetchProduct);
   const { items, setItems } = useCartContext();
+  const { favorites, setFavorites } = useFavoritesContext();
 
   function addProduct() {
     const exists = items.find((prod: any) => prod.id === product().id);
 
     if (!exists) {
-      setItems([...items, {...product()}])
+      setItems([...items, { ...product() }]);
+    }
+  }
+
+  function favoriteProduct() {
+    const exists = favorites.find((prod: any) => prod.id === product().id);
+
+    if (!exists) {
+      setFavorites([...favorites, { ...product() }]);
     }
   }
 
@@ -44,7 +54,11 @@ const ProductPage = () => {
                   </span>
                   <span class="pl-2">Voeg toe aan winkelmand</span>
                 </button>
-                <button type="button" class="btn btn-favorite ml-2">
+                <button
+                  type="button"
+                  onClick={favoriteProduct}
+                  class="btn btn-favorite ml-2"
+                >
                   <span class="material-symbols-outlined align-middle">
                     favorite
                   </span>

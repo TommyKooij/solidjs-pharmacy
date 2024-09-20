@@ -15,6 +15,7 @@ export type Review = {
   title: string;
   description: string;
   stars: number;
+  customerImage: string;
   customerName: string;
   addedDate: Date;
 };

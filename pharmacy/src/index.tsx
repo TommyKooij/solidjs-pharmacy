@@ -9,6 +9,7 @@ import ProductPage from "./pages/Product";
 import Favorites from "./pages/Favorites";
 import Cart from "./pages/Cart";
 import Login from "./pages/Login";
+import SectionPage from "./pages/Section";
 
 const root = document.getElementById("root");
 
@@ -22,7 +23,8 @@ render(
   () => (
     <Router root={App}>
       <Route path="/" component={Home} />
-      <Route path="/Producten/:id" component={ProductPage} />
+      <Route path="/Producten/:type" component={SectionPage} />
+      <Route path="/Producten/:type/:id" component={ProductPage} />
       <Route path="/Favorieten" component={Favorites} />
       <Route path="/Winkelwagen" component={Cart} />
       <Route path={["/Login", "/Registreer"]} component={Login} />

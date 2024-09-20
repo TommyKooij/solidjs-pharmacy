@@ -36,7 +36,7 @@ const Header = () => {
 };
 
 const Navigation = () => {
-  const sections = ["Soorten", "Voeding", "Kinderen", "Dieren"];
+  const types = ["Soorten", "Voeding", "Kinderen", "Dieren"];
 
   return (
     <>
@@ -52,10 +52,10 @@ const Navigation = () => {
       <div class="navigation">
         <Searchbar />
         <div class="mx-8">
-          {sections.map((section) => (
+          {types.map((type) => (
             <>
-              <A href={`/${section}`} class="btn btn-search">
-                {section}
+              <A href={`/Producten/${type}`} class="btn btn-search">
+                {type}
               </A>
               <span class="text-gray-400">|</span>
             </>
