@@ -8,8 +8,9 @@ import Home from "./pages/Home";
 import ProductPage from "./pages/Product";
 import Favorites from "./pages/Favorites";
 import Cart from "./pages/Cart";
-import Login from "./pages/Login";
+import Login from "./pages/auth/Login";
 import SectionPage from "./pages/Section";
+import Register from "./pages/auth/Register";
 
 const root = document.getElementById("root");
 
@@ -27,7 +28,9 @@ render(
       <Route path="/Producten/:type/:id" component={ProductPage} />
       <Route path="/Favorieten" component={Favorites} />
       <Route path="/Winkelwagen" component={Cart} />
-      <Route path={["/Login", "/Registreer"]} component={Login} />
+
+      <Route path={"/Login"} component={Login} />
+      <Route path={"/Registreer"} component={Register} />
     </Router>
   ),
   root!

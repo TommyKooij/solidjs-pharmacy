@@ -1,6 +1,7 @@
 import { A } from "@solidjs/router";
 import "../styles/styles.css";
 import Searchbar from "./Searchbar";
+import { useCartContext } from "../context/CartContext";
 
 // * Header content
 const Header = () => {
@@ -36,6 +37,12 @@ const Header = () => {
 };
 
 const Navigation = () => {
+  const { items } = useCartContext();
+  const quantity = () => {
+    return items.reduce((acc, current) => {
+      return acc + 1;
+    }, 0);
+  };
   const types = ["Voeding", "Kinderen", "Dieren", "Volwassenen"];
 
   return (
@@ -69,6 +76,11 @@ const Navigation = () => {
             <span class="material-symbols-outlined align-middle">
               shopping_cart
             </span>
+            {quantity() > 0 ? (
+              <span class="pl-2">{quantity()}</span>
+            ) : (
+              <span></span>
+            )}
           </A>
         </div>
       </div>

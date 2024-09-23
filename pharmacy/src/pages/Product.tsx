@@ -1,7 +1,7 @@
 import PageLayout from "./layout/Layout";
 import DefaultImage from "../assets/1077596-200.png";
 import { useParams } from "@solidjs/router";
-import { createResource, Show } from "solid-js";
+import { createResource, createSignal, Show } from "solid-js";
 import { useCartContext } from "../context/CartContext";
 import { useFavoritesContext } from "../context/FavoriteContext";
 import { Product } from "../types/types";
