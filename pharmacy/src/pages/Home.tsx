@@ -58,18 +58,26 @@ const ProductGroup = ({ title, products }: ProductGroupProps) => {
       <p class="title-group">{title}</p>
       <div class="product-group">
         <For each={products}>
-          {(product) => (
-            <A href={"/Producten/" + product.type + "/" + product.id}>
-              <Card>
-                <div class="flex justify-center">
-                  <img src={DefaultImage} alt="product_image" class="size-48" />
-                </div>
-                <p class="title-card">{product.name}</p>
-                <p class="description-card">{product.description}</p>
-                <p class="price-card">€{product.price}</p>
-              </Card>
-            </A>
-          )}
+          {(product, index) =>
+            index() <= 4 ? (
+              <A href={"/Producten/" + product.type + "/" + product.id}>
+                <Card>
+                  <div class="flex justify-center">
+                    <img
+                      src={DefaultImage}
+                      alt="product_image"
+                      class="size-48"
+                    />
+                  </div>
+                  <p class="title-card">{product.name}</p>
+                  <p class="description-card">{product.description}</p>
+                  <p class="price-card">€{product.price}</p>
+                </Card>
+              </A>
+            ) : (
+              <div></div>
+            )
+          }
         </For>
       </div>
     </div>
