@@ -115,15 +115,18 @@ body {
   @apply text-gray-900 
   bg-gray-50 
   px-4 mx-2
-  border border-white
+  border-b-2 border-gray-900
   rounded-lg;
+}
+.btn-login:hover {
+  @apply bg-gray-200;
 }
 
 .btn-register {
   @apply text-white 
   bg-gray-900 
   px-4 mx-2
-  border border-gray-900
+  border-b-2 border-gray-900
   rounded-lg;
 }
 .btn-register:hover {
@@ -138,6 +141,17 @@ body {
   border-radius: 50%;
   @apply text-white
   bg-green-300;
+}
+
+.btn-favorited {
+  border-radius: 50%;
+  @apply text-white 
+  bg-green-500;
+}
+.btn-favorited:hover {
+  border-radius: 50%;
+  @apply text-gray-200 
+  bg-green-700;
 }
 /*#endregion */
 

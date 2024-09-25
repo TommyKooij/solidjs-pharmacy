@@ -20,13 +20,35 @@ const Home = () => {
   const [products] = createResource(fetchProducts);
   const [reviews] = createResource(fetchReviews);
 
+  function compareFavoriteProducts(a: Product, b: Product) {
+    return b.favorited - a.favorited;
+  }
+
+  function compareNewProducts(a: Product, b: Product) {
+    const dateA = a.addedDate;
+    const dateB = b.addedDate;
+    if (dateA < dateB) {
+      return 1;
+    }
+    if (dateA > dateB) {
+      return -1;
+    }
+    return 0;
+  }
+
   return (
     <PageLayout>
       <Show when={products() && reviews()} fallback={<p>Loading...</p>}>
         <div class="space-y-14">
-          <Carousel />
-          <ProductGroup title="Nieuwe Producten" products={products()} />
-          <ProductGroup title="Populaire Producten" products={products()} />
+          {/* <Carousel /> */}
+          <ProductGroup
+            title="Nieuwe Producten"
+            products={products().sort(compareNewProducts)}
+          />
+          <ProductGroup
+            title="Populaire Producten"
+            products={products().sort(compareFavoriteProducts)}
+          />
           <ReviewGroup title="Wat vinden anderen van ons" reviews={reviews()} />
         </div>
       </Show>
@@ -106,11 +128,17 @@ const ReviewGroup = ({ title, reviews }: ReviewGroupProps) => {
           {(review) => (
             <Card>
               <div>
-                {stars.map((star) => (
-                  <span class="material-symbols-outlined text-gray-900">
-                    star
-                  </span>
-                ))}
+                {stars.map((star, index) =>
+                  review.stars > index ? (
+                    <span class="material-symbols-outlined text-green-500">
+                      star
+                    </span>
+                  ) : (
+                    <span class="material-symbols-outlined text-gray-400">
+                      star
+                    </span>
+                  )
+                )}
               </div>
               <p class="title-card">{review.title}</p>
               <p class="description-card">{review.description}</p>

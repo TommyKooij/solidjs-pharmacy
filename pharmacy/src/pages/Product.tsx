@@ -5,6 +5,7 @@ import { createResource, createSignal, Show } from "solid-js";
 import { useCartContext } from "../context/CartContext";
 import { useFavoritesContext } from "../context/FavoriteContext";
 import { Product } from "../types/types";
+import heart_outlined from "../assets/icons/favorite_outlined.svg";
 
 async function fetchProduct(id: any) {
   const res = await fetch(`http://localhost:4000/products/${id}`);
@@ -16,20 +17,32 @@ const ProductPage = () => {
   const [product] = createResource(params.id, fetchProduct);
   const { items, setItems } = useCartContext();
   const { favorites, setFavorites } = useFavoritesContext();
+  const [addedToCart, setAddedToCart] = createSignal<boolean>(false);
+  const [isFavorited, setIsFavorited] = createSignal<boolean>(false);
 
   function addProduct() {
     const exists = items.find((prod: Product) => prod.id === product().id);
 
+    if (exists) {
+      setAddedToCart(false);
+    }
+
     if (!exists) {
       setItems([...items, { ...product() }]);
+      setAddedToCart(true);
     }
   }
 
   function favoriteProduct() {
     const exists = favorites.find((prod: Product) => prod.id === product().id);
 
+    if (exists) {
+      setIsFavorited(false);
+    }
+
     if (!exists) {
       setFavorites([...favorites, { ...product() }]);
+      setIsFavorited(true);
     }
   }
 
@@ -49,21 +62,52 @@ const ProductPage = () => {
               <p class="product-price">€{product().price}</p>
               <p class="product-description">{product().description}</p>
               <div class="pt-4">
-                <button type="button" onClick={addProduct} class="btn btn-add">
-                  <span class="material-symbols-outlined align-middle">
-                    shopping_cart
-                  </span>
-                  <span class="pl-2">Voeg toe aan winkelmand</span>
-                </button>
-                <button
-                  type="button"
-                  onClick={favoriteProduct}
-                  class="btn btn-favorite ml-2"
-                >
-                  <span class="material-symbols-outlined align-middle">
-                    favorite
-                  </span>
-                </button>
+                {addedToCart() === true ? (
+                  <button
+                    type="button"
+                    onClick={addProduct}
+                    class="btn btn-add"
+                  >
+                    <span class="material-symbols-outlined align-middle">
+                      shopping_cart
+                    </span>
+                    <span class="pl-2">Toegevoegd aan winkelmand</span>
+                  </button>
+                ) : (
+                  <button
+                    type="button"
+                    onClick={addProduct}
+                    class="btn btn-add"
+                  >
+                    <span class="material-symbols-outlined align-middle">
+                      shopping_cart
+                    </span>
+                    <span class="pl-2">Voeg toe aan winkelmand</span>
+                  </button>
+                )}
+                {isFavorited() === true ? (
+                  <button
+                    type="button"
+                    onClick={favoriteProduct}
+                    class="btn btn-favorited ml-2"
+                  >
+                    <span class="material-symbols-outlined align-middle">
+                      favorite
+                    </span>
+                  </button>
+                ) : (
+                  <>
+                    <button
+                      type="button"
+                      onClick={favoriteProduct}
+                      class="btn btn-favorite ml-2"
+                    >
+                      <span class="material-symbols-outlined align-middle">
+                        favorite
+                      </span>
+                    </button>
+                  </>
+                )}
               </div>
             </div>
           </div>

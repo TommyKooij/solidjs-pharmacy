@@ -9,7 +9,7 @@
       "type": "Voeding",
       "dose": "",
       "addedDate": "2024-09-01",
-      "viewCount": 1
+      "favorited": 1
     },
     {
       "id": 2,
@@ -20,7 +20,7 @@
       "type": "Voeding",
       "dose": "",
       "addedDate": "2024-09-02",
-      "viewCount": 2
+      "favorited": 2
     },
     {
       "id": 3,
@@ -31,7 +31,7 @@
       "type": "Voeding",
       "dose": "",
       "addedDate": "2024-09-03",
-      "viewCount": 3
+      "favorited": 3
     },
     {
       "id": 4,
@@ -42,7 +42,7 @@
       "type": "Voeding",
       "dose": "",
       "addedDate": "2024-09-04",
-      "viewCount": 4
+      "favorited": 4
     },
     {
       "id": 5,
@@ -53,7 +53,7 @@
       "type": "Voeding",
       "dose": "",
       "addedDate": "2024-09-05",
-      "viewCount": 5
+      "favorited": 5
     },
     {
       "id": 6,
@@ -64,7 +64,7 @@
       "type": "Voeding",
       "dose": "",
       "addedDate": "2024-09-06",
-      "viewCount": 6
+      "favorited": 6
     },
     {
       "id": 7,
@@ -75,7 +75,7 @@
       "type": "Voeding",
       "dose": "",
       "addedDate": "2024-09-07",
-      "viewCount": 7
+      "favorited": 7
     },
     {
       "id": 8,
@@ -86,7 +86,7 @@
       "type": "Kinderen",
       "dose": "",
       "addedDate": "2024-09-08",
-      "viewCount": 8
+      "favorited": 8
     },
     {
       "id": 9,
@@ -97,7 +97,7 @@
       "type": "Kinderen",
       "dose": "",
       "addedDate": "2024-09-09",
-      "viewCount": 9
+      "favorited": 9
     },
     {
       "id": 10,
@@ -108,7 +108,7 @@
       "type": "Voeding",
       "dose": "",
       "addedDate": "2024-09-10",
-      "viewCount": 10
+      "favorited": 10
     }
   ]
 }

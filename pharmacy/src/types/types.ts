@@ -7,7 +7,7 @@ export type Product = {
   type: string;
   dose: string;
   addedDate: Date;
-  viewCount: number;
+  favorited: number;
 };
 
 export type Review = {

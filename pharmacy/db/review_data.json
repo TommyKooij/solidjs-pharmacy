@@ -4,7 +4,7 @@
       "id": 1,
       "title": "title 1",
       "description": "description 1",
-      "stars": 3,
+      "stars": 4,
       "customerName": "Casandra",
       "addedDate": "18/09/2024"
     },
@@ -12,7 +12,7 @@
       "id": 2,
       "title": "title 2",
       "description": "description 2",
-      "stars": 3,
+      "stars": 4,
       "customerName": "Timo",
       "addedDate": "18/09/2024"
     },
