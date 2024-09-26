@@ -1,0 +1,16 @@
+{
+  "customers": [
+    {
+      "userName": "Tom Kooij",
+      "mail": "tjwckooij@gmail.com",
+      "password": "password",
+      "img": ""
+    },
+    {
+      "userName": "Tommy Kooij",
+      "mail": "tjwckooij2@gmail.com",
+      "password": "password2",
+      "img": ""
+    }
+  ]
+}

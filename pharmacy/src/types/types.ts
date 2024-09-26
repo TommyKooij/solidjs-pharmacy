@@ -19,3 +19,10 @@ export type Review = {
   customerName: string;
   addedDate: Date;
 };
+
+export type Customer = {
+  name: string;
+  email: string;
+  password: string;
+  img: string;
+};
