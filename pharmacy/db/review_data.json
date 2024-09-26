@@ -2,26 +2,26 @@
   "reviews": [
     {
       "id": 1,
-      "title": "title 1",
-      "description": "description 1",
+      "title": "Website functioneerde goed",
+      "description": "Website functioneerde goed. Snelle levering en goede prijs.",
       "stars": 4,
       "customerName": "Casandra",
       "addedDate": "18/09/2024"
     },
     {
       "id": 2,
-      "title": "title 2",
-      "description": "description 2",
+      "title": "Goede prijs, super levering. Prijs was concurentiëel",
+      "description": "Prijs was concurentiëel, product makkelijk te vinden en het bestellen en het afhalen in een apotheek in de buurt super makkelijk. Twee dagen later had ik het bestelde reeds in huis.",
       "stars": 4,
-      "customerName": "Timo",
+      "customerName": "Mathijs",
       "addedDate": "18/09/2024"
     },
     {
       "id": 3,
-      "title": "title 3",
-      "description": "description 3",
-      "stars": 3,
-      "customerName": "Mathijs",
+      "title": "Correct!",
+      "description": "Bestelling was correct en ruim binnen de afgesproken tijd afgeleverd!",
+      "stars": 5,
+      "customerName": "Timo",
       "addedDate": "18/09/2024"
     }
   ]

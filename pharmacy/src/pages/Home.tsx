@@ -81,19 +81,24 @@ const ProductGroup = ({ title, products }: ProductGroupProps) => {
       <div class="product-group">
         <For each={products}>
           {(product, index) =>
-            index() <= 4 ? (
-              <A href={"/Producten/" + product.type + "/" + product.id}>
+            index() <= 5 ? (
+              <A
+                href={"/Producten/" + product.type + "/" + product.id}
+                class="max-w-64"
+              >
                 <Card>
-                  <div class="flex justify-center">
-                    <img
-                      src={DefaultImage}
-                      alt="product_image"
-                      class="size-48"
-                    />
+                  <div class="min-h-[420px]">
+                    <div class="flex justify-center pb-6">
+                      <img
+                        src={product.image}
+                        alt="product_image"
+                        class="size-48"
+                      />
+                    </div>
+                    <p class="title-card">{product.name}</p>
+                    <p class="description-card">{product.description}</p>
+                    <p class="price-card">€{product.price}</p>
                   </div>
-                  <p class="title-card">{product.name}</p>
-                  <p class="description-card">{product.description}</p>
-                  <p class="price-card">€{product.price}</p>
                 </Card>
               </A>
             ) : (
@@ -126,32 +131,34 @@ const ReviewGroup = ({ title, reviews }: ReviewGroupProps) => {
       <div class="review-group">
         <For each={reviews}>
           {(review) => (
-            <Card>
-              <div>
-                {stars.map((star, index) =>
-                  review.stars > index ? (
-                    <span class="material-symbols-outlined text-green-500">
-                      star
-                    </span>
-                  ) : (
-                    <span class="material-symbols-outlined text-gray-400">
-                      star
-                    </span>
-                  )
-                )}
-              </div>
-              <p class="title-card">{review.title}</p>
-              <p class="description-card">{review.description}</p>
-              <div class="flex space-x-3 mt-4">
-                <img src={DefaultImage} alt="user_icon" class="user-icon" />
+            <div class="max-w-[526px]">
+              <Card>
                 <div>
-                  <p class="name-card">{review.customerName}</p>
-                  <p class="date-card">
-                    Toegevoegd op: {review.addedDate.toString()}
-                  </p>
+                  {stars.map((star, index) =>
+                    review.stars > index ? (
+                      <span class="material-symbols-outlined text-green-500">
+                        star
+                      </span>
+                    ) : (
+                      <span class="material-symbols-outlined text-gray-400">
+                        star
+                      </span>
+                    )
+                  )}
                 </div>
-              </div>
-            </Card>
+                <p class="title-card">{review.title}</p>
+                <p class="description-card">{review.description}</p>
+                <div class="flex space-x-3 mt-4">
+                  <img src={DefaultImage} alt="user_icon" class="user-icon" />
+                  <div>
+                    <p class="name-card">{review.customerName}</p>
+                    <p class="date-card">
+                      Toegevoegd op: {review.addedDate.toString()}
+                    </p>
+                  </div>
+                </div>
+              </Card>
+            </div>
           )}
         </For>
       </div>

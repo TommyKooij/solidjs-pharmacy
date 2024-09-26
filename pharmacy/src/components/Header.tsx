@@ -57,7 +57,7 @@ const Header = () => {
 const Navigation = () => {
   const { items } = useCartContext();
   const quantity = () => {
-    return items.reduce((acc, current) => {
+    return items.reduce((acc: number) => {
       return acc + 1;
     }, 0);
   };

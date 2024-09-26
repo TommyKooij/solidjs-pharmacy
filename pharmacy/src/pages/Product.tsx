@@ -1,11 +1,9 @@
 import PageLayout from "./layout/Layout";
-import DefaultImage from "../assets/1077596-200.png";
 import { useParams } from "@solidjs/router";
 import { createResource, createSignal, Show } from "solid-js";
 import { useCartContext } from "../context/CartContext";
 import { useFavoritesContext } from "../context/FavoriteContext";
 import { Product } from "../types/types";
-import heart_outlined from "../assets/icons/favorite_outlined.svg";
 
 async function fetchProduct(id: any) {
   const res = await fetch(`http://localhost:4000/products/${id}`);
@@ -56,8 +54,12 @@ const ProductPage = () => {
       <PageLayout>
         <Show when={product()} fallback={<p>Loading...</p>}>
           <div class="flex justify-center my-6">
-            <img src={DefaultImage} alt="product_image" class="product-img" />
-            <div class="p-4 ml-10">
+            <img
+              src={product().image}
+              alt="product_image"
+              class="product-img"
+            />
+            <div class="p-4 ml-10 max-w-md">
               <p class="product-title">{product().name}</p>
               <p class="product-price">€{product().price}</p>
               <p class="product-description">{product().description}</p>
