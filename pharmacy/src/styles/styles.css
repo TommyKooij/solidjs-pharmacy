@@ -69,6 +69,7 @@ body {
 /*#region buttons*/
 .btn {
   @apply inline-block 
+  h-auto w-auto
   p-2
   text-center
   align-middle;
@@ -106,9 +107,13 @@ body {
 .btn-remove {
   @apply text-white 
   bg-red-600
-  my-4
   border-2 border-red-900
   rounded-lg;
+}
+.btn-remove:hover {
+  @apply text-gray-200
+  bg-red-700
+  border-red-900;
 }
 
 .btn-login {

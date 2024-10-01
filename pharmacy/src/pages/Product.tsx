@@ -23,6 +23,7 @@ const ProductPage = () => {
 
     if (exists) {
       setAddedToCart(false);
+      setItems([...items.filter((prod: Product) => prod.id !== product().id)]);
     }
 
     if (!exists) {
@@ -36,6 +37,9 @@ const ProductPage = () => {
 
     if (exists) {
       setIsFavorited(false);
+      setFavorites([
+        ...favorites.filter((prod: Product) => prod.id !== product().id),
+      ]);
     }
 
     if (!exists) {

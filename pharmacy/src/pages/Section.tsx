@@ -23,18 +23,25 @@ const SectionPage = () => {
             {(product: Product) => (
               <Switch>
                 <Match when={product.type === params.type}>
-                  <A href={"/Producten/" + product.type + "/" + product.id}>
+                  <A
+                    href={"/Producten/" + product.type + "/" + product.id}
+                    class="max-w-64"
+                  >
                     <Card>
-                      <div class="flex justify-center">
-                        <img
-                          src={DefaultImage}
-                          alt="product_image"
-                          class="size-48"
-                        />
+                      <div class="h-[420px] max-h-[420px] flex flex-col justify-between">
+                        <div>
+                          <div class="flex justify-center pb-6">
+                            <img
+                              src={product.image}
+                              alt="product_image"
+                              class="size-48"
+                            />
+                          </div>
+                          <p class="title-card">{product.name}</p>
+                          <p class="description-card">{product.description}</p>
+                        </div>
+                        <p class="price-card">€{product.price}</p>
                       </div>
-                      <p class="title-card">{product.name}</p>
-                      <p class="description-card">{product.description}</p>
-                      <p class="price-card">€{product.price}</p>
                     </Card>
                   </A>
                 </Match>
