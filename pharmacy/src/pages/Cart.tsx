@@ -1,9 +1,9 @@
 import { A } from "@solidjs/router";
-import PageLayout from "../layout/Layout";
-import Card from "../../components/Card";
+import PageLayout from "./layout/Layout";
+import Card from "../components/Card";
 import { For } from "solid-js";
-import { Product } from "../../types/types";
-import { useCartContext } from "../../context/CartContext";
+import { Product } from "../types/types";
+import { useCartContext } from "../context/CartContext";
 
 const Cart = () => {
   const { items, setItems } = useCartContext();
