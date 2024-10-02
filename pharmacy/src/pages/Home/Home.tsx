@@ -1,9 +1,9 @@
-import Card from "../components/Card";
-import PageLayout from "./layout/Layout";
+import Card from "../../components/Card";
+import PageLayout from "../layout/Layout";
 import DefaultImage from "../assets/1077596-200.png";
 import { A } from "@solidjs/router";
 import { createResource, For, Show } from "solid-js";
-import { Product, Review } from "../types/types";
+import { Product, Review } from "../../types/types";
 
 async function fetchProducts() {
   const res = await fetch("http://localhost:4000/products");

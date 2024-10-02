@@ -4,10 +4,10 @@ import { Route, Router } from "@solidjs/router";
 
 import "./styles/index.css";
 import App from "./App";
-import Home from "./pages/Home";
+import Home from "./pages/Home/Home";
 import ProductPage from "./pages/Product";
 import Favorites from "./pages/Favorites";
-import Cart from "./pages/Cart";
+import Cart from "./pages/Cart/Cart";
 import Login from "./pages/auth/Login";
 import SectionPage from "./pages/Section";
 import Register from "./pages/auth/Register";
