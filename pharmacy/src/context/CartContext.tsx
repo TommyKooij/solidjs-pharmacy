@@ -2,10 +2,17 @@ import { createContext, useContext } from "solid-js";
 import { createStore } from "solid-js/store";
 import { Product } from "../types/types";
 
-export const CartContext = createContext();
+export type CartContextType = {
+  items: Product[];
+  setItems: (favorites: Product[]) => void;
+};
+
+export const CartContext = createContext<CartContextType>();
 
 export const useCartContext = () => {
-  return useContext(CartContext);
+  const context = useContext(CartContext);
+  if (!context) throw new Error("CartContext is not valid");
+  return context;
 };
 
 const CartContextProvider = (props: any) => {
