@@ -9,7 +9,7 @@ const Cart = () => {
   const { items, setItems } = useCartContext();
 
   const quantity = () => {
-    return items.reduce((acc: number, current: number) => {
+    return items.reduce((acc: number) => {
       return acc + 1;
     }, 0);
   };

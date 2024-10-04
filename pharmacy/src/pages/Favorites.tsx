@@ -7,8 +7,9 @@ import { Product } from "../types/types";
 
 const Favorites = () => {
   const { favorites } = useFavoritesContext();
+
   const quantity = () => {
-    return favorites.reduce((acc, current) => {
+    return favorites.reduce((acc: number) => {
       return acc + 1;
     }, 0);
   };
