@@ -1,5 +1,5 @@
 <p>
-  <img src="" alt="Pharmacy" />
+  <img src="https://github.com/TommyKooij/solidjs-pharmacy/blob/main/Pharmacy_Banner.png?raw=true" alt="Pharmacy" />
 </p>
 
 # Pharmacy
