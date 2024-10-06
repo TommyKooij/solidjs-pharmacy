@@ -5,5 +5,7 @@ This site is mainly build for showcasing purposes, so some features might be inc
 
 ## Important
 To make sure the site is working properly, run the following commands:
-- json-server -w -p 4000 ./db/product_data.json
-- json-server -w -p 4001 ./db/review_data.json
+```sh
+> json-server -w -p 4000 ./db/product_data.json
+> json-server -w -p 4001 ./db/review_data.json
+```
