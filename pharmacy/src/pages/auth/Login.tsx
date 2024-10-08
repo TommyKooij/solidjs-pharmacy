@@ -1,11 +1,14 @@
 import { A } from "@solidjs/router";
 import { createSignal } from "solid-js";
+import { useAuthContext } from "../../context/AuthContext";
 
 const Login = () => {
   return (
     <div class="flex justify-center min-w-max m-20">
       <div class="border border-gray-400 p-10">
-        <p class="text-green-500 text-6xl font-bold">PHARMACY</p>
+        <A href="/">
+          <p class="text-green-500 text-6xl font-bold">PHARMACY</p>
+        </A>
         <p class="text-black pt-8 text-3xl font-bold">Inloggen</p>
         <Form />
         <p class="py-6">
@@ -34,11 +37,13 @@ const Form = () => {
 
   //TODO: Finish handleSubmit function
   function handleSubmit() {
-    //working on
+    //! Does not work properly yet
+    const { status, setStatus } = useAuthContext();
+    setStatus(!status());
   }
 
   return (
-    <form onSubmit={handleSubmit} action={"/"}>
+    <form onSubmit={handleSubmit} method="get" action={"/"}>
       <div class="pt-8">
         <label for="email" class="text-gray-400 py-1 text-lg">
           Email

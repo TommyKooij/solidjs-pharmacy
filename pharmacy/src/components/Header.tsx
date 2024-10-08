@@ -2,10 +2,17 @@ import { A } from "@solidjs/router";
 import "../styles/styles.css";
 import Searchbar from "./Searchbar";
 import { useCartContext } from "../context/CartContext";
+import { useAuthContext } from "../context/AuthContext";
+import DefaultImage from "../assets/1077596-200.png";
 
 // * Header content
 const Header = () => {
   const pages = ["Merken", "Ons Advies", "Partners", "Contact"];
+  const { status, setStatus } = useAuthContext();
+
+  function handleClick() {
+    setStatus(!status());
+  }
 
   return (
     <>
@@ -22,12 +29,23 @@ const Header = () => {
             ))}
           </div>
           <div>
-            <A href="/Login" class="btn btn-login">
-              Log In
-            </A>
-            <A href="/Registreer" class="btn btn-register">
-              Registreer
-            </A>
+            {status() === true ? (
+              <img
+                src={DefaultImage}
+                alt="user-icon"
+                onClick={handleClick}
+                class="btn user-icon"
+              />
+            ) : (
+              <>
+                <A href="/Login" class="btn btn-login">
+                  Log In
+                </A>
+                <A href="/Registreer" class="btn btn-register">
+                  Registreer
+                </A>
+              </>
+            )}
           </div>
         </div>
       </div>

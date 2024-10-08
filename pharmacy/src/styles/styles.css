@@ -247,8 +247,10 @@ body {
 
 .user-icon {
   border-radius: 50%;
-  @apply h-10
-  border border-black;
+  @apply bg-white
+  h-10
+  border border-black
+  cursor-pointer;
 }
 
 .product-img {
