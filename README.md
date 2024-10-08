@@ -1,3 +1,7 @@
+<p>
+  <img src="https://github.com/TommyKooij/solidjs-pharmacy/blob/main/Pharmacy_Banner.png?raw=true" alt="Pharmacy" />
+</p>
+
 # Pharmacy
 Pharmacy is a mock-website developed with SolidJS, TypeScript, Tailwind CSS, and Jest for testing. The site is meant to depict an online store where customers can buy pharmaceutical products and add them to their favorites list. Besides that, the user can also log in or register an account.
 
