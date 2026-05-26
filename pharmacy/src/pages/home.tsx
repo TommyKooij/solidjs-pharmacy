@@ -1,31 +1,27 @@
-import { createSignal } from 'solid-js';
+import { A } from '@solidjs/router';
+import Card from '../components/Card';
 
 export default function Home() {
-  const [count, setCount] = createSignal(0);
-
   return (
     <section class="bg-gray-100 text-gray-700 p-8">
-      <h1 class="text-2xl font-bold">Home</h1>
-      <p class="mt-4">This is the home page.</p>
-
-      <div class="flex items-center space-x-2">
-        <button
-          type="button"
-          class="border rounded-lg px-2 border-gray-900"
-          onClick={() => setCount(count() - 1)}
-        >
-          -
-        </button>
-
-        <output class="p-10px">Count: {count()}</output>
-
-        <button
-          type="button"
-          class="border rounded-lg px-2 border-gray-900"
-          onClick={() => setCount(count() + 1)}
-        >
-          +
-        </button>
+      <div class="grid grid-cols-4 gap-10 my-4">
+        <Card>
+          <img
+            src=""
+            alt="Image"
+          />
+          <h2 class="my-2 text-2xl font-bold text-left">Title</h2>
+          <p class="text-gray-500 text-left">Description</p>
+          <div class="pt-4 flex justify-between items-center">
+            <span class="text-lg font-semibold text-green-500">€0.00</span>
+            <A
+              href="/product/:id"
+              class="p-2 text-sm text-white bg-green-500 rounded-lg"
+            >
+              View Product
+            </A>
+          </div>
+        </Card>
       </div>
     </section>
   );

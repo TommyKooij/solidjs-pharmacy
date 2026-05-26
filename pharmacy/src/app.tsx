@@ -1,7 +1,9 @@
-import { Suspense, type Component } from 'solid-js';
+import { createSignal, Suspense, type Component } from 'solid-js';
 import { A } from '@solidjs/router';
 
 const App: Component<{ children: Element }> = (props) => {
+  const [searchItem, setSearchItem] = createSignal<string>("")
+
   return (
     <>
       <nav class="bg-green-400 text-white p-4">
@@ -19,7 +21,8 @@ const App: Component<{ children: Element }> = (props) => {
             <input
               class="w-sm p-1 bg-white text-sm text-gray-900 rounded-lg border border-green-700"
               type="text"
-              value=""
+              value={searchItem()}
+              onChange={(e) => setSearchItem(e.target.value)}
             />
           </li>
 
