@@ -15,7 +15,8 @@ const App: Component<{ children: Element }> = (props) => {
             </A>
           </li>
 
-          <li class="text-sm flex items-center space-x-1 ml-auto">
+          {/* Action buttons */}
+          <li class="hidden text-sm lg:flex items-center space-x-1 ml-auto">
             <div class="py-2 px-4">
               <A
                 href="/cart"
@@ -79,6 +80,33 @@ const App: Component<{ children: Element }> = (props) => {
                 </div>
               </A>
             </div>
+          </li>
+
+          {/* Hover menu */}
+          <li class="inline text-sm space-x-1 ml-auto lg:hidden">
+            <button>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="icon icon-tabler icons-tabler-outline icon-tabler-menu-2"
+              >
+                <path
+                  stroke="none"
+                  d="M0 0h24v24H0z"
+                  fill="none"
+                />
+                <path d="M4 6l16 0" />
+                <path d="M4 12l16 0" />
+                <path d="M4 18l16 0" />
+              </svg>
+            </button>
           </li>
         </ul>
       </nav>
