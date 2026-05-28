@@ -5,7 +5,7 @@ export default function Home() {
   return (
     <section class="bg-gray-100 text-gray-700 p-8">
       <div class="grid grid-cols-4 gap-10 my-4">
-        <Card>
+        {/* <Card>
           <img
             src=""
             alt="Image"
@@ -21,7 +21,7 @@ export default function Home() {
               View Product
             </A>
           </div>
-        </Card>
+        </Card> */}
       </div>
     </section>
   );
