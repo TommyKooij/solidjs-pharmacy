@@ -13,7 +13,7 @@ export const routes: RouteDefinition[] = [
     component: lazy(() => import("./pages/cart")),
   },
   {
-    path: "/product",
+    path: "/product/:id",
     component: lazy(() => import("./pages/product")),
   },
   {

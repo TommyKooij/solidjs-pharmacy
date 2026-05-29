@@ -1,7 +1,16 @@
 import { Suspense, type Component } from 'solid-js';
 import { A } from '@solidjs/router';
+import { useCartContext } from './contexts/CartContext';
 
 const App: Component<{ children: Element }> = (props) => {
+  const { items } = useCartContext();
+
+  const quantity = () => {
+    return items.reduce((acc: number, current: any) => {
+      return acc + current.quantity;
+    }, 0);
+  };
+
   return (
     <>
       <nav class="bg-green-400 text-white px-4">
@@ -15,8 +24,7 @@ const App: Component<{ children: Element }> = (props) => {
             </A>
           </li>
 
-          {/* Action buttons */}
-          <li class="hidden text-sm lg:flex items-center space-x-1 ml-auto">
+          <li class="text-sm flex items-center space-x-1 ml-auto">
             <div class="py-2 px-4">
               <A
                 href="/cart"
@@ -45,7 +53,7 @@ const App: Component<{ children: Element }> = (props) => {
                     <path d="M17 17h-11v-14h-2" />
                     <path d="M6 5l14 1l-1 7h-13" />
                   </svg>
-                  <p>Cart</p>
+                  <p>Cart ({quantity()})</p>
                 </div>
               </A>
             </div>
@@ -80,33 +88,6 @@ const App: Component<{ children: Element }> = (props) => {
                 </div>
               </A>
             </div>
-          </li>
-
-          {/* Hover menu */}
-          <li class="inline text-sm space-x-1 ml-auto lg:hidden">
-            <button>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                class="icon icon-tabler icons-tabler-outline icon-tabler-menu-2"
-              >
-                <path
-                  stroke="none"
-                  d="M0 0h24v24H0z"
-                  fill="none"
-                />
-                <path d="M4 6l16 0" />
-                <path d="M4 12l16 0" />
-                <path d="M4 18l16 0" />
-              </svg>
-            </button>
           </li>
         </ul>
       </nav>

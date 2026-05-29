@@ -1,0 +1,161 @@
+[
+  {
+    "id":1,
+    "company":"Greenstone LLC",
+    "brand":"Amlodipine besylate and Atorvastatin calcium",
+    "name":"amlodipine besylate and atorvastatin calcium",
+    "price":4.56,
+    "image":"http://dummyimage.com/350x200.png/cc0000/ffffff"
+  },
+  {
+    "id": 2,
+    "company": "IASO Inc",
+    "brand": "IASO progressive age care toner",
+    "name": "adenosine",
+    "price": 3.25,
+    "image": "http://dummyimage.com/350x200.png/cc0000/ffffff"
+  },
+  {
+    "id": 3,
+    "company": "Atco International",
+    "brand": "Free Hand",
+    "name": "ALCOHOL",
+    "price": 6.17,
+    "image": "http://dummyimage.com/350x200.png/5fa2dd/ffffff"
+  },
+  {
+    "id": 4,
+    "company": "Endo Pharmaceuticals Inc.",
+    "brand": "Opana",
+    "name": "oxymorphone hydrochloride",
+    "price": 0.19,
+    "image": "http://dummyimage.com/350x200.png/cc0000/ffffff"
+  },
+  {
+    "id": 5,
+    "company": "HOMEOLAB USA INC.",
+    "brand": "ACONITINUM",
+    "name": "ACONITINUM",
+    "price": 5.24,
+    "image": "http://dummyimage.com/350x200.png/dddddd/000000"
+  },
+  {
+    "id": 6,
+    "company": "Amneal Pharmaceuticals of New York, LLC",
+    "brand": "Hydrocodone Bitartrate and Acetaminophen",
+    "name": "Hydrocodone Bitartrate and Acetaminophen",
+    "price": 1.19,
+    "image": "http://dummyimage.com/350x200.png/ff4444/ffffff"
+  },
+  {
+    "id": 7,
+    "company": "Barr Laboratories Inc.",
+    "brand": "Clonazepam",
+    "name": "Clonazepam",
+    "price": 6.34,
+    "image": "http://dummyimage.com/350x200.png/dddddd/000000"
+  },
+  {
+    "id": 8,
+    "company": "Amerisource Bergen",
+    "brand": "Acetaminophen",
+    "name": "Acetaminophen",
+    "price": 1.85,
+    "image": "http://dummyimage.com/350x200.png/ff4444/ffffff"
+  },
+  {
+    "id": 9,
+    "company": "Greenbrier International, Inc.",
+    "brand": "Assured Alcohol Cleansing Pad",
+    "name": "ISOPROPYL ALCOHOL",
+    "price": 0.36,
+    "image": "http://dummyimage.com/350x200.png/ff4444/ffffff"
+  },
+  {
+    "id": 10,
+    "company": "Physicians Total Care, Inc.",
+    "brand": "Tretinoin",
+    "name": "Tretinoin",
+    "price": 5.24,
+    "image": "http://dummyimage.com/350x200.png/ff4444/ffffff"
+  },
+  {
+    "id":11,
+    "company":"Bryant Ranch Prepack",
+    "brand":"TOPIRAMATE",
+    "name":"TOPIRAMATE",
+    "price":7.67,
+    "image": "http://dummyimage.com/350x200.png/dddddd/000000"
+  },
+  {
+    "id":12,
+    "company":"P and L Development of New York Corporation (ReadyInCase)",
+    "brand":"All Day Pain Relief",
+    "name":"Naproxen sodium",
+    "price":8.12,
+    "image": "http://dummyimage.com/350x200.png/5fa2dd/ffffff"},
+  {
+    "id": 13,
+    "company": "Accra-Pac, Inc.",
+    "brand": "Banana Boat Sport Performance SPF 30",
+    "name": "Avobenzone and Octocrylene and Oxybenzone",
+    "price": 9.77,
+    "image": "http://dummyimage.com/350x200.png/5fa2dd/ffffff"
+  },
+  {
+    "id": 14,
+    "company": "Theraceutix, LLC",
+    "brand": "TCX Skincare",
+    "name": "Colloidal Oatmeal",
+    "price": 7.73,
+    "image": "http://dummyimage.com/350x200.png/dddddd/ffffff"
+  },
+  {
+    "id": 15,
+    "company": "PHI, Inc",
+    "brand": "Zcaine Fast Acting Anesthetic",
+    "name": "LIDOCAINE",
+    "price": 8.43,
+    "image": "http://dummyimage.com/350x200.png/cc0000/ffffff"
+  },
+  {
+    "id": 16,
+    "company": "Proficient Rx LP",
+    "brand": "Lidocaine Hydrochloride",
+    "name": "Lidocaine",
+    "price": 4.20,
+    "image": "http://dummyimage.com/350x200.png/dddddd/ffffff"
+  },
+  {
+    "id": 17,
+    "company": "CARDINAL HEALTH",
+    "brand": "LEADER ANTIFUNGAL TOLNAFTATE",
+    "name": "TOLNAFTATE",
+    "price": 2.10,
+    "image": "http://dummyimage.com/350x200.png/cc0000/ffffff"
+  },
+  {
+    "id": 18,
+    "company": "Nephron Pharmaceuticals Corporation",
+    "brand": "Albuterol Sulfate",
+    "name": "Albuterol Sulfate",
+    "price": 6.33,
+    "image": "http://dummyimage.com/350x200.png/cc0000/ffffff"
+  },
+  {
+    "id": 19,
+    "company": "Kosan Kozmetik Sanayi ve Ticaret A.S.",
+    "brand": "flormar REBORN FOUNDATION SUNSCREEN BROAD SPECTRUM SPF 20 SF19 Natural Beige",
+    "name": "OCTINOXATE",
+    "price": 7.83,
+    "image": "http://dummyimage.com/350x200.png/cc0000/ffffff"
+  },
+  {
+    "id": 20,
+    "company": "Newton Laboratories, Inc.",
+    "brand": "Sports Injury",
+    "name": "Apis mel., Arnica, Bellis, Bryonia, Calendula, Chamomilla, Cinchona, Gelsemium, Hamamelis, Hypericum, Lacticum acidum, Ledum, Phosphorus, Rhus toxicodendron, Ruta, Sarcolacticum ac., Staphysag., Symphytum, Echinacea, Hydrastis",
+    "price": 6.76,
+    "image": "http://dummyimage.com/350x200.png/cc0000/ffffff"
+  }
+]
