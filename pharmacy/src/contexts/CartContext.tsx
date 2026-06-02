@@ -1,10 +1,22 @@
-import { createContext, useContext } from "solid-js";
+import { createContext, ParentComponent, useContext } from "solid-js";
 import { createStore } from "solid-js/store";
+import { ProductItem } from "../pages/home";
 
-export const CartContext = createContext();
+function createCartStore() {
+  const [items, setItems] = createStore<ProductItem[]>([]);
 
-export function CartContextProvider(props: any) {
-  const [items, setItems] = createStore([]);
+  return {
+    items,
+    setItems,
+  };
+}
+
+type CartContextType = ReturnType<typeof createCartStore>;
+
+export const CartContext = createContext<CartContextType>();
+
+export const CartContextProvider: ParentComponent = (props) => {
+  const [items, setItems] = createStore<ProductItem[]>([]);
 
   return (
     <CartContext.Provider value={{ items, setItems }}>
@@ -14,5 +26,11 @@ export function CartContextProvider(props: any) {
 }
 
 export function useCartContext() {
-  return useContext(CartContext);
+  const context = useContext(CartContext);
+  
+  if (!context) {
+    throw new Error("CartContext is not valid!");
+  };
+  
+  return context;
 }

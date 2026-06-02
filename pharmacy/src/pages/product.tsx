@@ -2,7 +2,7 @@ import { useParams } from "@solidjs/router";
 import { createResource, createSignal, Show } from "solid-js";
 import Card from "../components/Card";
 import { useCartContext } from "../contexts/CartContext";
-import { ProductItem } from "../Types";
+import { ProductItem } from "./home";
 
 const fetchProduct = async (id : string) => {
   const res = await fetch("../db/MOCK_DATA.json")
@@ -47,37 +47,39 @@ export default function Product() {
       when={product()}
       fallback={<p>Loading product...</p>}
     >
-      <section class="bg-gray-100 text-gray-700 py-8 px-20">
-        <h1 class="text-4xl font-bold">{product().brand}</h1>
-        <h2 class="text-xl text-gray-500">
-          {product().name.charAt(0).toUpperCase()}
-          {product().name.slice(1)}
-        </h2>
-        <div class="flex py-8 justify-between items-center gap-8">
-          <img
-            src={product().image}
-            alt={product().name}
-            class="object-cover size-[50%]"
-          />
-          <Card>
-            <p class="py-4 text-2xl text-left font-semibold text-green-500">
-              Price: €{product().price}
-            </p>
-            <button
-              type="button"
-              onClick={addProduct}
-              disabled={adding()}
-              class="p-2 transition duration-300 ease-in-out text-sm text-white bg-green-500 rounded-lg hover:text-gray-100 hover:bg-green-600"
-            >
-              Add To Basket
-            </button>
-
-            <Show when={adding()}>
-              <div class="m-2 p-2 border-amber-500 border-2 rounded-md inline-block">
-                {product().title} was added to the cart
+      <section class="text-gray-700 px-4 py-8 sm:px-6 lg:px-8">
+        <div class="max-w-7xl my-8 mx-auto">
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start py-8">
+            <div class="bg-white rounded-xl p-6 shadow-sm">
+              <img
+                src={product().image}
+                alt={product().name}
+                class="w-full max-h-[500px] object-contain mx-auto"
+              />
+            </div>
+            <Card variant="panel">
+              <h1 class="text-3xl text-left font-bold">{product().brand}</h1>
+              <p class="text-gray-500 text-left text-lg">{product().name}</p>
+              <p class="text-4xl text-left font-bold text-green-500">
+                €{product().price}
+              </p>
+              <button
+                type="button"
+                onClick={addProduct}
+                disabled={adding()}
+                class="w-full sm:w-auto px-6 py-3 mt-4 rounded-lg bg-green-500 text-white font-semibold transition hover:bg-green-600 disabled:opacity-50"
+              >
+                Add To Basket
+              </button>
+              <div class="h-12">
+                <Show when={adding()}>
+                  <div class="my-2 p-2 border-green-500 border-2 rounded-md inline-block">
+                    Product was added to the cart!
+                  </div>
+                </Show>
               </div>
-            </Show>
-          </Card>
+            </Card>
+          </div>
         </div>
       </section>
     </Show>

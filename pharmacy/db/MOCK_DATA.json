@@ -5,7 +5,8 @@
     "brand":"Amlodipine besylate and Atorvastatin calcium",
     "name":"amlodipine besylate and atorvastatin calcium",
     "price":4.56,
-    "image":"http://dummyimage.com/350x200.png/cc0000/ffffff"
+    "image":"http://dummyimage.com/350x200.png/cc0000/ffffff",
+    "quantity": 0
   },
   {
     "id": 2,
@@ -13,7 +14,8 @@
     "brand": "IASO progressive age care toner",
     "name": "adenosine",
     "price": 3.25,
-    "image": "http://dummyimage.com/350x200.png/cc0000/ffffff"
+    "image": "http://dummyimage.com/350x200.png/cc0000/ffffff",
+    "quantity": 0
   },
   {
     "id": 3,
@@ -21,7 +23,8 @@
     "brand": "Free Hand",
     "name": "ALCOHOL",
     "price": 6.17,
-    "image": "http://dummyimage.com/350x200.png/5fa2dd/ffffff"
+    "image": "http://dummyimage.com/350x200.png/5fa2dd/ffffff",
+    "quantity": 0
   },
   {
     "id": 4,
@@ -29,7 +32,8 @@
     "brand": "Opana",
     "name": "oxymorphone hydrochloride",
     "price": 0.19,
-    "image": "http://dummyimage.com/350x200.png/cc0000/ffffff"
+    "image": "http://dummyimage.com/350x200.png/cc0000/ffffff",
+    "quantity": 0
   },
   {
     "id": 5,
@@ -37,7 +41,8 @@
     "brand": "ACONITINUM",
     "name": "ACONITINUM",
     "price": 5.24,
-    "image": "http://dummyimage.com/350x200.png/dddddd/000000"
+    "image": "http://dummyimage.com/350x200.png/dddddd/000000",
+    "quantity": 0
   },
   {
     "id": 6,
@@ -45,7 +50,8 @@
     "brand": "Hydrocodone Bitartrate and Acetaminophen",
     "name": "Hydrocodone Bitartrate and Acetaminophen",
     "price": 1.19,
-    "image": "http://dummyimage.com/350x200.png/ff4444/ffffff"
+    "image": "http://dummyimage.com/350x200.png/ff4444/ffffff",
+    "quantity": 0
   },
   {
     "id": 7,
@@ -53,7 +59,8 @@
     "brand": "Clonazepam",
     "name": "Clonazepam",
     "price": 6.34,
-    "image": "http://dummyimage.com/350x200.png/dddddd/000000"
+    "image": "http://dummyimage.com/350x200.png/dddddd/000000",
+    "quantity": 0
   },
   {
     "id": 8,
@@ -61,7 +68,8 @@
     "brand": "Acetaminophen",
     "name": "Acetaminophen",
     "price": 1.85,
-    "image": "http://dummyimage.com/350x200.png/ff4444/ffffff"
+    "image": "http://dummyimage.com/350x200.png/ff4444/ffffff",
+    "quantity": 0
   },
   {
     "id": 9,
@@ -69,7 +77,8 @@
     "brand": "Assured Alcohol Cleansing Pad",
     "name": "ISOPROPYL ALCOHOL",
     "price": 0.36,
-    "image": "http://dummyimage.com/350x200.png/ff4444/ffffff"
+    "image": "http://dummyimage.com/350x200.png/ff4444/ffffff",
+    "quantity": 0
   },
   {
     "id": 10,
@@ -77,30 +86,35 @@
     "brand": "Tretinoin",
     "name": "Tretinoin",
     "price": 5.24,
-    "image": "http://dummyimage.com/350x200.png/ff4444/ffffff"
+    "image": "http://dummyimage.com/350x200.png/ff4444/ffffff",
+    "quantity": 0
   },
   {
-    "id":11,
-    "company":"Bryant Ranch Prepack",
-    "brand":"TOPIRAMATE",
-    "name":"TOPIRAMATE",
-    "price":7.67,
-    "image": "http://dummyimage.com/350x200.png/dddddd/000000"
+    "id": 11,
+    "company": "Bryant Ranch Prepack",
+    "brand": "TOPIRAMATE",
+    "name": "TOPIRAMATE",
+    "price": 7.67,
+    "image": "http://dummyimage.com/350x200.png/dddddd/000000",
+    "quantity": 0
   },
   {
-    "id":12,
-    "company":"P and L Development of New York Corporation (ReadyInCase)",
-    "brand":"All Day Pain Relief",
-    "name":"Naproxen sodium",
-    "price":8.12,
-    "image": "http://dummyimage.com/350x200.png/5fa2dd/ffffff"},
+    "id": 12,
+    "company": "P and L Development of New York Corporation (ReadyInCase)",
+    "brand": "All Day Pain Relief",
+    "name": "Naproxen sodium",
+    "price": 8.12,
+    "image": "http://dummyimage.com/350x200.png/5fa2dd/ffffff",
+    "quantity": 0
+  },
   {
     "id": 13,
     "company": "Accra-Pac, Inc.",
     "brand": "Banana Boat Sport Performance SPF 30",
     "name": "Avobenzone and Octocrylene and Oxybenzone",
     "price": 9.77,
-    "image": "http://dummyimage.com/350x200.png/5fa2dd/ffffff"
+    "image": "http://dummyimage.com/350x200.png/5fa2dd/ffffff",
+    "quantity": 0
   },
   {
     "id": 14,
@@ -108,7 +122,8 @@
     "brand": "TCX Skincare",
     "name": "Colloidal Oatmeal",
     "price": 7.73,
-    "image": "http://dummyimage.com/350x200.png/dddddd/ffffff"
+    "image": "http://dummyimage.com/350x200.png/dddddd/ffffff",
+    "quantity": 0
   },
   {
     "id": 15,
@@ -116,23 +131,26 @@
     "brand": "Zcaine Fast Acting Anesthetic",
     "name": "LIDOCAINE",
     "price": 8.43,
-    "image": "http://dummyimage.com/350x200.png/cc0000/ffffff"
+    "image": "http://dummyimage.com/350x200.png/cc0000/ffffff",
+    "quantity": 0
   },
   {
     "id": 16,
     "company": "Proficient Rx LP",
     "brand": "Lidocaine Hydrochloride",
     "name": "Lidocaine",
-    "price": 4.20,
-    "image": "http://dummyimage.com/350x200.png/dddddd/ffffff"
+    "price": 4.2,
+    "image": "http://dummyimage.com/350x200.png/dddddd/ffffff",
+    "quantity": 0
   },
   {
     "id": 17,
     "company": "CARDINAL HEALTH",
     "brand": "LEADER ANTIFUNGAL TOLNAFTATE",
     "name": "TOLNAFTATE",
-    "price": 2.10,
-    "image": "http://dummyimage.com/350x200.png/cc0000/ffffff"
+    "price": 2.1,
+    "image": "http://dummyimage.com/350x200.png/cc0000/ffffff",
+    "quantity": 0
   },
   {
     "id": 18,
@@ -140,7 +158,8 @@
     "brand": "Albuterol Sulfate",
     "name": "Albuterol Sulfate",
     "price": 6.33,
-    "image": "http://dummyimage.com/350x200.png/cc0000/ffffff"
+    "image": "http://dummyimage.com/350x200.png/cc0000/ffffff",
+    "quantity": 0
   },
   {
     "id": 19,
@@ -148,7 +167,8 @@
     "brand": "flormar REBORN FOUNDATION SUNSCREEN BROAD SPECTRUM SPF 20 SF19 Natural Beige",
     "name": "OCTINOXATE",
     "price": 7.83,
-    "image": "http://dummyimage.com/350x200.png/cc0000/ffffff"
+    "image": "http://dummyimage.com/350x200.png/cc0000/ffffff",
+    "quantity": 0
   },
   {
     "id": 20,
@@ -156,6 +176,7 @@
     "brand": "Sports Injury",
     "name": "Apis mel., Arnica, Bellis, Bryonia, Calendula, Chamomilla, Cinchona, Gelsemium, Hamamelis, Hypericum, Lacticum acidum, Ledum, Phosphorus, Rhus toxicodendron, Ruta, Sarcolacticum ac., Staphysag., Symphytum, Echinacea, Hydrastis",
     "price": 6.76,
-    "image": "http://dummyimage.com/350x200.png/cc0000/ffffff"
+    "image": "http://dummyimage.com/350x200.png/cc0000/ffffff",
+    "quantity": 0
   }
 ]
