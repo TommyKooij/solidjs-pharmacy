@@ -2,10 +2,10 @@ import { For } from "solid-js";
 import Card from "../components/Card";
 import { useCartContext } from "../contexts/CartContext";
 import { ProductItem } from "./home";
-import { darkTheme } from "../app";
+import { darkTheme } from "../components/ToggleModeButton";
 
 export default function Cart() {
-  const { items } = useCartContext();
+  const { items, removeItem } = useCartContext();
 
   const total = () => {
     return items.reduce((acc: number, p: ProductItem) => {
@@ -27,8 +27,14 @@ export default function Cart() {
               ) : (
                 <div class="space-y-4">
                   <For each={items}>
-                    {(item) => (
-                      <div class="flex flex-col sm:flex-row gap-4 p-4 border rounded-lg bg-white">
+                    {(item: ProductItem) => (
+                      <div
+                        class="flex flex-col sm:flex-row gap-4 p-4 border rounded-lg"
+                        classList={{
+                          "bg-gray-800 border-gray-900": darkTheme() === true,
+                          "bg-white": darkTheme() === false,
+                        }}
+                      >
                         <img
                           src={item.image}
                           alt={item.name}
@@ -38,13 +44,21 @@ export default function Cart() {
                         <div class="flex-1">
                           <h3 class="font-semibold">{item.name}</h3>
 
-                          <div class="mt-2 text-sm text-gray-600">
+                          <div
+                            class="mt-2 text-sm text-gray-600"
+                            classList={{ "text-gray-200": darkTheme() }}
+                          >
                             <p>Price: €{item.price}</p>
                             <p>Quantity: {item.quantity}</p>
                           </div>
 
                           <div class="mt-2">
-                            <button class="text-sm underline">Remove</button>
+                            <button
+                              class="text-sm underline"
+                              onClick={() => removeItem(item.id)}
+                            >
+                              Remove
+                            </button>
                           </div>
                         </div>
 

@@ -3,7 +3,7 @@ import { createResource, createSignal, Show } from "solid-js";
 import Card from "../components/Card";
 import { useCartContext } from "../contexts/CartContext";
 import { ProductItem } from "./home";
-import { darkTheme } from "../app";
+import { darkTheme } from "../components/ToggleModeButton";
 
 const fetchProduct = async (id : string) => {
   const res = await fetch("../db/MOCK_DATA.json")

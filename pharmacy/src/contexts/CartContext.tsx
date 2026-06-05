@@ -5,9 +5,14 @@ import { ProductItem } from "../pages/home";
 function createCartStore() {
   const [items, setItems] = createStore<ProductItem[]>([]);
 
+  const removeItem = (id: number) => {
+    setItems((items) => items.filter((item) => item.id !== id));
+  };
+
   return {
     items,
     setItems,
+    removeItem,
   };
 }
 
@@ -16,10 +21,10 @@ type CartContextType = ReturnType<typeof createCartStore>;
 export const CartContext = createContext<CartContextType>();
 
 export const CartContextProvider: ParentComponent = (props) => {
-  const [items, setItems] = createStore<ProductItem[]>([]);
+  const store = createCartStore();
 
   return (
-    <CartContext.Provider value={{ items, setItems }}>
+    <CartContext.Provider value={store}>
       {props.children}
     </CartContext.Provider>
   );

@@ -1,5 +1,5 @@
 import { children, ParentProps } from "solid-js";
-import { darkTheme } from "../app";
+import { darkTheme } from "./ToggleModeButton";
 
 type CardProps = ParentProps<{
   variant?: "product" | "panel";

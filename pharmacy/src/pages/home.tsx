@@ -1,7 +1,7 @@
 import { A } from '@solidjs/router';
 import Card from '../components/Card';
 import { createResource, For, Show } from 'solid-js';
-import { darkTheme } from "../app";
+import { darkTheme } from '../components/ToggleModeButton';
 
 export type ProductItem = {
   id: number;
