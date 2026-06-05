@@ -3,6 +3,7 @@ import { createResource, createSignal, Show } from "solid-js";
 import Card from "../components/Card";
 import { useCartContext } from "../contexts/CartContext";
 import { ProductItem } from "./home";
+import { darkTheme } from "../app";
 
 const fetchProduct = async (id : string) => {
   const res = await fetch("../db/MOCK_DATA.json")
@@ -50,7 +51,13 @@ export default function Product() {
       <section class="text-gray-700 px-4 py-8 sm:px-6 lg:px-8">
         <div class="max-w-7xl my-8 mx-auto">
           <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start py-8">
-            <div class="bg-white rounded-xl p-6 shadow-sm">
+            <div
+              class="rounded-xl p-6 shadow-sm"
+              classList={{
+                "bg-gray-800": darkTheme() === true,
+                "bg-white": darkTheme() === false
+               }}
+            >
               <img
                 src={product().image}
                 alt={product().name}
@@ -58,7 +65,12 @@ export default function Product() {
               />
             </div>
             <Card variant="panel">
-              <h1 class="text-3xl text-left font-bold">{product().brand}</h1>
+              <h1
+                class="text-3xl text-left font-bold"
+                classList={{ "text-gray-200": darkTheme() }}
+              >
+                {product().brand}
+              </h1>
               <p class="text-gray-500 text-left text-lg">{product().name}</p>
               <p class="text-4xl text-left font-bold text-green-500">
                 €{product().price}

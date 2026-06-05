@@ -1,6 +1,7 @@
 import { A } from '@solidjs/router';
 import Card from '../components/Card';
 import { createResource, For, Show } from 'solid-js';
+import { darkTheme } from "../app";
 
 export type ProductItem = {
   id: number;
@@ -36,7 +37,7 @@ export default function Home() {
                   alt={product.name}
                   class="w-full h-48 object-contain"
                 />
-                <h2 class="mt-4 text-left text-xl sm:text-2xl font-bold">
+                <h2 class="mt-4 text-left text-xl sm:text-2xl font-bold" classList={{"text-gray-200": darkTheme()}}>
                   {product.brand}
                 </h2>
                 <p class="text-gray-500 text-left">{product.name}</p>

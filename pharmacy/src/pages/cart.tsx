@@ -2,6 +2,7 @@ import { For } from "solid-js";
 import Card from "../components/Card";
 import { useCartContext } from "../contexts/CartContext";
 import { ProductItem } from "./home";
+import { darkTheme } from "../app";
 
 export default function Cart() {
   const { items } = useCartContext();
@@ -14,45 +15,78 @@ export default function Cart() {
 
   return (
     <section class="text-gray-700 p-8">
-      {/* Change this to table */}
-      <div class="bg-white flex flex-col lg:flex-row">
-        <img
-          src=""
-          alt=""
-          class=""
-        />
-        <div class="mx-2 pl-2 border-l-2">
-          <h2 class="font-semibold">Product Name</h2>
-          <p>Name</p>
-        </div>
-        <div class="mx-2 pl-2 border-l-2">
-          <h2 class="font-semibold">Product Price</h2>
-          <p>0</p>
-        </div>
-        <div class="mx-2 pl-2 border-l-2">
-          <h2 class="font-semibold">Product Count</h2>
-          <p>0</p>
-        </div>
-      </div>
+      <div class="max-w-7xl mx-auto px-4">
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+          <div
+            class="lg:col-span-2"
+            classList={{ "text-gray-200": darkTheme() }}
+          >
+            <Card variant="panel">
+              {total() === 0 ? (
+                <h2 class="text-center">Shopping cart is empty</h2>
+              ) : (
+                <div class="space-y-4">
+                  <For each={items}>
+                    {(item) => (
+                      <div class="flex flex-col sm:flex-row gap-4 p-4 border rounded-lg bg-white">
+                        <img
+                          src={item.image}
+                          alt={item.name}
+                          class="w-full sm:w-32 h-32 object-contain"
+                        />
 
-      <div class="max-w-md my-8 mx-auto">
-        <Card variant="panel">
-          {total() === 0 ? <h2 class="text-center">Shopping cart is empty</h2> : <h2 class="text-center">Your shopping cart</h2>}
-          <For each={items}>
-            {(item: ProductItem) => (
-              <p class="my-3 text-center">
-                {item.name} - €{item.price} x {item.quantity}
-              </p>
-            )}
-          </For>
+                        <div class="flex-1">
+                          <h3 class="font-semibold">{item.name}</h3>
 
-          <p class="mt-8 pt-4 border-t-2 font-bold text-center">
-            Total cart price - €{total()}
-          </p>
-          <button class="mt-2 px-3 py-2 text-sm text-white bg-green-500 rounded-lg transition duration-300 ease-in-out hover:text-gray-100 hover:bg-green-600">
-            Checkout
-          </button>
-        </Card>
+                          <div class="mt-2 text-sm text-gray-600">
+                            <p>Price: €{item.price}</p>
+                            <p>Quantity: {item.quantity}</p>
+                          </div>
+
+                          <div class="mt-2">
+                            <button class="text-sm underline">Remove</button>
+                          </div>
+                        </div>
+
+                        <div class="font-bold text-lg">
+                          €{item.price * item.quantity}
+                        </div>
+                      </div>
+                    )}
+                  </For>
+                </div>
+              )}
+            </Card>
+          </div>
+
+          <div
+            class="lg:sticky lg:top-4"
+            classList={{ "text-gray-200": darkTheme() }}
+          >
+            <Card variant="panel">
+              <div class="space-y-3">
+                <div class="flex justify-between">
+                  <span class="font-semibold">Subtotal</span>
+                  <span>€{total().toFixed(2)}</span>
+                </div>
+
+                <div class="flex justify-between">
+                  <span>Discounts</span>
+                  <span>€0.00</span>
+                </div>
+
+                <div class="border-t pt-3 flex justify-between font-bold text-lg">
+                  <span>Total</span>
+                  <span>€{total().toFixed(2)}</span>
+                </div>
+
+                <button class="w-full mt-4 py-3 bg-green-500 text-white rounded-lg hover:bg-green-600 transition">
+                  Checkout
+                </button>
+              </div>
+            </Card>
+          </div>
+        </div>
       </div>
     </section>
   );
