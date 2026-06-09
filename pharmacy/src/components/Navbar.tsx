@@ -89,7 +89,7 @@ const Navbar = () => {
               <button
                 class="p-2"
                 onClick={() => setMenuOpen(!menuOpen())}
-                onFocusOut={() => setMenuOpen(!menuOpen())}
+                onFocusOut={() => setMenuOpen(false)}
                 aria-label="Toggle menu"
               >
                 <svg
